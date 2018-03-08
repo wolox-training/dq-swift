@@ -11,8 +11,8 @@
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
-		9D15751A1CB1B27500EA395E /* BaseProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* BaseProjectTests.swift */; };
-		9D1575251CB1B27500EA395E /* BaseProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* BaseProjectUITests.swift */; };
+		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
+		9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* WBooksUITests.swift */; };
 		9D1F7A711CBED81900E20BE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
 		9D1F7A721CBED81900E20BE5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
 		9D1F7A741CBED82900E20BE5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -34,14 +34,14 @@
 			containerPortal = 9D1574F91CB1B27500EA395E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9D1575001CB1B27500EA395E;
-			remoteInfo = BaseProject;
+			remoteInfo = WBooks;
 		};
 		9D1575211CB1B27500EA395E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9D1574F91CB1B27500EA395E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9D1575001CB1B27500EA395E;
-			remoteInfo = BaseProject;
+			remoteInfo = WBooks;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,17 +60,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9D1575011CB1B27500EA395E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D15750E1CB1B27500EA395E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1575101CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D1575151CB1B27500EA395E /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D1575191CB1B27500EA395E /* BaseProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProjectTests.swift; sourceTree = "<group>"; };
+		9D1575151CB1B27500EA395E /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1575191CB1B27500EA395E /* WBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksTests.swift; sourceTree = "<group>"; };
 		9D15751B1CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D1575201CB1B27500EA395E /* BaseProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D1575241CB1B27500EA395E /* BaseProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProjectUITests.swift; sourceTree = "<group>"; };
+		9D1575201CB1B27500EA395E /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1575241CB1B27500EA395E /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		9D1575261CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9D1F7A701CBED81900E20BE5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				9D6E405F1CB1BA21008CE558 /* Frameworks */,
-				9D1575031CB1B27500EA395E /* BaseProject */,
-				9D1575181CB1B27500EA395E /* BaseProjectTests */,
-				9D1575231CB1B27500EA395E /* BaseProjectUITests */,
+				9D1575031CB1B27500EA395E /* WBooks */,
+				9D1575181CB1B27500EA395E /* WBooksTests */,
+				9D1575231CB1B27500EA395E /* WBooksUITests */,
 				9D1575021CB1B27500EA395E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,14 +137,14 @@
 		9D1575021CB1B27500EA395E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D1575011CB1B27500EA395E /* BaseProject.app */,
-				9D1575151CB1B27500EA395E /* BaseProjectTests.xctest */,
-				9D1575201CB1B27500EA395E /* BaseProjectUITests.xctest */,
+				9D1575011CB1B27500EA395E /* WBooks.app */,
+				9D1575151CB1B27500EA395E /* WBooksTests.xctest */,
+				9D1575201CB1B27500EA395E /* WBooksUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9D1575031CB1B27500EA395E /* BaseProject */ = {
+		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
 				E1530D9A1ED378F9002A9002 /* Services */,
@@ -156,25 +156,25 @@
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 			);
-			path = BaseProject;
+			path = WBooks;
 			sourceTree = "<group>";
 		};
-		9D1575181CB1B27500EA395E /* BaseProjectTests */ = {
+		9D1575181CB1B27500EA395E /* WBooksTests */ = {
 			isa = PBXGroup;
 			children = (
-				9D1575191CB1B27500EA395E /* BaseProjectTests.swift */,
+				9D1575191CB1B27500EA395E /* WBooksTests.swift */,
 				9D15751B1CB1B27500EA395E /* Info.plist */,
 			);
-			path = BaseProjectTests;
+			path = WBooksTests;
 			sourceTree = "<group>";
 		};
-		9D1575231CB1B27500EA395E /* BaseProjectUITests */ = {
+		9D1575231CB1B27500EA395E /* WBooksUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9D1575241CB1B27500EA395E /* BaseProjectUITests.swift */,
+				9D1575241CB1B27500EA395E /* WBooksUITests.swift */,
 				9D1575261CB1B27500EA395E /* Info.plist */,
 			);
-			path = BaseProjectUITests;
+			path = WBooksUITests;
 			sourceTree = "<group>";
 		};
 		9D6E405F1CB1BA21008CE558 /* Frameworks */ = {
@@ -215,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9D1575001CB1B27500EA395E /* BaseProject */ = {
+		9D1575001CB1B27500EA395E /* WBooks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D1575291CB1B27500EA395E /* Build configuration list for PBXNativeTarget "BaseProject" */;
+			buildConfigurationList = 9D1575291CB1B27500EA395E /* Build configuration list for PBXNativeTarget "WBooks" */;
 			buildPhases = (
 				9D1574FD1CB1B27500EA395E /* Sources */,
 				9D1574FE1CB1B27500EA395E /* Frameworks */,
@@ -229,14 +229,14 @@
 			);
 			dependencies = (
 			);
-			name = BaseProject;
-			productName = BaseProject;
-			productReference = 9D1575011CB1B27500EA395E /* BaseProject.app */;
+			name = WBooks;
+			productName = WBooks;
+			productReference = 9D1575011CB1B27500EA395E /* WBooks.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9D1575141CB1B27500EA395E /* BaseProjectTests */ = {
+		9D1575141CB1B27500EA395E /* WBooksTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D15752C1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "BaseProjectTests" */;
+			buildConfigurationList = 9D15752C1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "WBooksTests" */;
 			buildPhases = (
 				9D1575111CB1B27500EA395E /* Sources */,
 				9D1575121CB1B27500EA395E /* Frameworks */,
@@ -248,14 +248,14 @@
 			dependencies = (
 				9D1575171CB1B27500EA395E /* PBXTargetDependency */,
 			);
-			name = BaseProjectTests;
-			productName = BaseProjectTests;
-			productReference = 9D1575151CB1B27500EA395E /* BaseProjectTests.xctest */;
+			name = WBooksTests;
+			productName = WBooksTests;
+			productReference = 9D1575151CB1B27500EA395E /* WBooksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9D15751F1CB1B27500EA395E /* BaseProjectUITests */ = {
+		9D15751F1CB1B27500EA395E /* WBooksUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D15752F1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "BaseProjectUITests" */;
+			buildConfigurationList = 9D15752F1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "WBooksUITests" */;
 			buildPhases = (
 				9D15751C1CB1B27500EA395E /* Sources */,
 				9D15751D1CB1B27500EA395E /* Frameworks */,
@@ -266,9 +266,9 @@
 			dependencies = (
 				9D1575221CB1B27500EA395E /* PBXTargetDependency */,
 			);
-			name = BaseProjectUITests;
-			productName = BaseProjectUITests;
-			productReference = 9D1575201CB1B27500EA395E /* BaseProjectUITests.xctest */;
+			name = WBooksUITests;
+			productName = WBooksUITests;
+			productReference = 9D1575201CB1B27500EA395E /* WBooksUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +298,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9D1574FC1CB1B27500EA395E /* Build configuration list for PBXProject "BaseProject" */;
+			buildConfigurationList = 9D1574FC1CB1B27500EA395E /* Build configuration list for PBXProject "WBooks" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -311,9 +311,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D1575001CB1B27500EA395E /* BaseProject */,
-				9D1575141CB1B27500EA395E /* BaseProjectTests */,
-				9D15751F1CB1B27500EA395E /* BaseProjectUITests */,
+				9D1575001CB1B27500EA395E /* WBooks */,
+				9D1575141CB1B27500EA395E /* WBooksTests */,
+				9D15751F1CB1B27500EA395E /* WBooksUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D15751A1CB1B27500EA395E /* BaseProjectTests.swift in Sources */,
+				9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1575251CB1B27500EA395E /* BaseProjectUITests.swift in Sources */,
+				9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,12 +414,12 @@
 /* Begin PBXTargetDependency section */
 		9D1575171CB1B27500EA395E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9D1575001CB1B27500EA395E /* BaseProject */;
+			target = 9D1575001CB1B27500EA395E /* WBooks */;
 			targetProxy = 9D1575161CB1B27500EA395E /* PBXContainerItemProxy */;
 		};
 		9D1575221CB1B27500EA395E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9D1575001CB1B27500EA395E /* BaseProject */;
+			target = 9D1575001CB1B27500EA395E /* WBooks */;
 			targetProxy = 9D1575211CB1B27500EA395E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -498,11 +498,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProject/Info.plist;
+				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProject.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -520,12 +520,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				INFOPLIST_FILE = WBooksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Debug;
 		};
@@ -533,12 +533,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = BaseProjectUITests/Info.plist;
+				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = BaseProject;
+				TEST_TARGET_NAME = WBooks;
 			};
 			name = Debug;
 		};
@@ -603,11 +603,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProject/Info.plist;
+				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "-D ALPHA";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProject.alpha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.alpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -625,12 +625,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				INFOPLIST_FILE = WBooksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Alpha;
 		};
@@ -638,12 +638,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = BaseProjectUITests/Info.plist;
+				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = BaseProject;
+				TEST_TARGET_NAME = WBooks;
 			};
 			name = Alpha;
 		};
@@ -708,10 +708,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProject/Info.plist;
+				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -729,12 +729,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				INFOPLIST_FILE = WBooksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Release;
 		};
@@ -742,12 +742,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = BaseProjectUITests/Info.plist;
+				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = BaseProject;
+				TEST_TARGET_NAME = WBooks;
 			};
 			name = Release;
 		};
@@ -811,10 +811,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProject/Info.plist;
+				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D PRODUCTION";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BaseProject.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WBooks.WBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -832,12 +832,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				INFOPLIST_FILE = WBooksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Production;
 		};
@@ -845,19 +845,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = BaseProjectUITests/Info.plist;
+				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.BaseProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = BaseProject;
+				TEST_TARGET_NAME = WBooks;
 			};
 			name = Production;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D1574FC1CB1B27500EA395E /* Build configuration list for PBXProject "BaseProject" */ = {
+		9D1574FC1CB1B27500EA395E /* Build configuration list for PBXProject "WBooks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE39E8751D1DAED00004FE95 /* Debug */,
@@ -868,7 +868,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9D1575291CB1B27500EA395E /* Build configuration list for PBXNativeTarget "BaseProject" */ = {
+		9D1575291CB1B27500EA395E /* Build configuration list for PBXNativeTarget "WBooks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE39E8761D1DAED00004FE95 /* Debug */,
@@ -879,7 +879,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9D15752C1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "BaseProjectTests" */ = {
+		9D15752C1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "WBooksTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE39E8771D1DAED00004FE95 /* Debug */,
@@ -890,7 +890,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9D15752F1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "BaseProjectUITests" */ = {
+		9D15752F1CB1B27500EA395E /* Build configuration list for PBXNativeTarget "WBooksUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE39E8781D1DAED00004FE95 /* Debug */,

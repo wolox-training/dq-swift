@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D1575001CB1B27500EA395E"
-               BuildableName = "BaseProject.app"
-               BlueprintName = "BaseProject"
-               ReferencedContainer = "container:BaseProject.xcodeproj">
+               BuildableName = "WBooks.app"
+               BlueprintName = "WBooks"
+               ReferencedContainer = "container:WBooks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D1575141CB1B27500EA395E"
-               BuildableName = "BaseProjectTests.xctest"
-               BlueprintName = "BaseProjectTests"
-               ReferencedContainer = "container:BaseProject.xcodeproj">
+               BuildableName = "WBooksTests.xctest"
+               BlueprintName = "WBooksTests"
+               ReferencedContainer = "container:WBooks.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,9 +45,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D15751F1CB1B27500EA395E"
-               BuildableName = "BaseProjectUITests.xctest"
-               BlueprintName = "BaseProjectUITests"
-               ReferencedContainer = "container:BaseProject.xcodeproj">
+               BuildableName = "WBooksUITests.xctest"
+               BlueprintName = "WBooksUITests"
+               ReferencedContainer = "container:WBooks.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D1575001CB1B27500EA395E"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
-            ReferencedContainer = "container:BaseProject.xcodeproj">
+            BuildableName = "WBooks.app"
+            BlueprintName = "WBooks"
+            ReferencedContainer = "container:WBooks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D1575001CB1B27500EA395E"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
-            ReferencedContainer = "container:BaseProject.xcodeproj">
+            BuildableName = "WBooks.app"
+            BlueprintName = "WBooks"
+            ReferencedContainer = "container:WBooks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -105,9 +105,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D1575001CB1B27500EA395E"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
-            ReferencedContainer = "container:BaseProject.xcodeproj">
+            BuildableName = "WBooks.app"
+            BlueprintName = "WBooks"
+            ReferencedContainer = "container:WBooks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

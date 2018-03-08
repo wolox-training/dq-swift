@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BaseProject.xcodeproj">
+      location = "self:/Users/diegoquiros/Documents/github/dq-swift/WBooks.xcodeproj">
    </FileRef>
 </Workspace>

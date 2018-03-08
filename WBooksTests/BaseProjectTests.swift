@@ -1,6 +1,6 @@
 //
-//  BaseProjectTests.swift
-//  BaseProjectTests
+//  WBooksTests.swift
+//  WBooksTests
 //
 //  Created by Guido Marucci Blas on 4/3/16.
 //  Copyright © 2016 Wolox. All rights reserved.
@@ -8,9 +8,9 @@
 
 import Quick
 import Nimble
-import BaseProject
+import WBooks
 
-final class BaseProjectSpec: QuickSpec {
+final class WBooksSpec: QuickSpec {
     
     override func spec() {
         
