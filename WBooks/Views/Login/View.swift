@@ -16,30 +16,14 @@ final class View: UIView, NibLoadable {
     @IBOutlet weak var wBooksLogo: UIImageView!
     @IBOutlet weak var logInButton: UIButton!
     
+    var onTap: (() -> Void)? = .none
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setButtonBorder(radius: 25, width: 2)
+        logInButton.addTarget(self, action: #selector(onTap(_:)), for: .touchUpInside)
     }
-    
-   /* @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UIButton!
-    
-    private var onTap: (() -> Void)? = .none
-    
-    func configureView(labelText: String, buttonTitle: String, onTap: @escaping () -> Void) {
-        label.text = labelText
-        label.sizeToFit()
-        
-        button.setTitle(buttonTitle, for: .normal)
-        button.addTarget(self, action: #selector(onTap(_:)), for: .touchUpInside)
-    
-        self.onTap = onTap
-    }
-    
-    @objc func onTap(_ sender: Any) {
-        onTap?()
-    }*/
     
 }
 
@@ -54,4 +38,7 @@ fileprivate extension View {
         logInButton.sizeToFit()
     }
     
+    @objc func onTap(_ sender: Any) {
+        onTap?()
+    }
 }

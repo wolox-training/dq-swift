@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if Environment.isTestTarget {
@@ -27,11 +28,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          *
          */
         
+        let rootViewController = ViewController()
+        GoogleLoginService.shared.bootstrap(
+            clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
+            presenter: rootViewController
+        )
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
         return true
+    }
+
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        return GoogleLoginService.shared.handle(url: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -64,5 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. 
         // See also applicationDidEnterBackground:.
     }
+    
 
 }
