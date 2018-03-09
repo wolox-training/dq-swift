@@ -19,7 +19,7 @@ final class View: UIView, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        setButtonBorder(radius: 15, width: 1.5)
+        setButtonBorder(radius: 25, width: 2)
     }
     
    /* @IBOutlet weak var label: UILabel!
@@ -50,8 +50,7 @@ fileprivate extension View {
         logInButton.layer.cornerRadius = radius
         logInButton.layer.borderWidth = width
         logInButton.layer.borderColor = UIColor.white.cgColor
-        //        logInButton.titleEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20)
-        logInButton.contentEdgeInsets = UIEdgeInsetsMake(5, 20, 5, 20)
+        logInButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 30, bottom: 15, right: 30)
         logInButton.sizeToFit()
     }
     
