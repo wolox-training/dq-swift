@@ -28,13 +28,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          *
          */
         
-        let rootViewController = ViewController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let rootViewController = ViewController() { [window = self.window] _ in
+            let books = [
+                Book(
+                    title: "El principito",
+                    author: ["John Dow"],
+                    description: "Un libro que leen todos en la escuela",
+                    image: URL(string: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG")!
+                )
+            ]
+            window?.rootViewController = BookIndexController(books: books)
+        }
         GoogleLoginService.shared.bootstrap(
             clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
             presenter: rootViewController
         )
         
-        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         

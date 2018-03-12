@@ -12,14 +12,17 @@ import GoogleSignIn
 
 final class ViewController: UIViewController {
     
+   private let onUserLogin: (User) -> Void
+    
     private var customView: View {
         return view as! View // swiftlint:disable:this force_cast
     }
     
     private let loginService: LoginService
     
-    init(loginService: LoginService = GoogleLoginService.shared) {
+    init(loginService: LoginService = GoogleLoginService.shared, onUserLogin: @escaping (User) -> Void) {
         self.loginService = loginService
+        self.onUserLogin = onUserLogin
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,9 +48,14 @@ fileprivate extension ViewController {
         loginService.login { result in
             switch result {
             case .success(let user):
-                print("User successfully logged in \(user.email)")
+                print("User successfully logged in \(user.userId)")
+                DispatchQueue.main.async {
+                    self.onUserLogin(user)
+                }
             case .failure(let error):
-                self.presentErrorAlert(error: error)
+                DispatchQueue.main.async {
+                    self.presentErrorAlert(error: error)
+                }
             }
         }
     }

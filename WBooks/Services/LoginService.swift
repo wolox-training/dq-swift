@@ -12,13 +12,22 @@ import GoogleSignIn
 
 struct User {
     
-    let email: String
+    let userId: String
+    
+}
+
+fileprivate extension User {
+    
+    static func from(googleUser: GIDGoogleUser) -> User {
+        return User(userId: googleUser.userID)
+    }
     
 }
 
 enum LoginError: Error {
     
-    case invalidCredentials
+    case alreadyLogginIn
+    case serviceProviderFailure(Error)
     
 }
 
@@ -34,6 +43,7 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     
     private let googleService = GIDSignIn.sharedInstance()!
     private var presenter: UIViewController? = .none
+    private var callback: ((Result<User, LoginError>) -> Void)? = .none
     
     private override init() { }
     
@@ -45,13 +55,18 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // TODO construir el result
+        let result: Result<User, LoginError>
         if error != nil {
-            print(error)
+            result = .failure(.serviceProviderFailure(error))
         } else if user != nil {
-            print(user)
+            result = .success(User.from(googleUser: user))
         } else {
-            print("WTF!")
+            fatalError("There is not error nor user!")
+        }
+        
+        if let callback = self.callback {
+            self.callback = .none
+            callback(result)
         }
     }
     
@@ -79,9 +94,15 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     }
     
     func login(callback: @escaping (Result<User, LoginError>) -> Void) {
+        guard self.callback == nil else {
+            callback(.failure(.alreadyLogginIn))
+            return
+        }
         if googleService.currentUser != nil {
-            
+            let user = User.from(googleUser: googleService.currentUser)
+            callback(.success(user))
         } else {
+            self.callback = callback
             googleService.signIn()
         }
     }
