@@ -6,13 +6,18 @@
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Core
 
-final class BookIndexView: UIView, NibLoadable {
+final internal class BookIndexView: UIView, NibLoadable {
     
-    @IBOutlet weak var bookTable: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBarBackground: UIImageView!
     
-    @IBOutlet weak var sadasd: UILabel!
+    func configureView() {
+        
+        self.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1)
+        tableView.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1)
+        
+    }
 }

@@ -17,29 +17,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LA6-yI-Bga">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="20" y="133" width="335" height="534"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoE-aj-T4D">
-                    <rect key="frame" x="166" y="270" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="6Dw-MD-csW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="LA6-yI-Bga" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="1xW-Vv-u0O"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LA6-yI-Bga" secondAttribute="trailing" id="N0U-6L-jwF"/>
+                <constraint firstItem="LA6-yI-Bga" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2RF-3R-uvv"/>
+                <constraint firstItem="6Dw-MD-csW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CYY-J7-BR4"/>
+                <constraint firstAttribute="trailing" secondItem="LA6-yI-Bga" secondAttribute="trailing" constant="20" id="GY7-Dg-dnm"/>
+                <constraint firstItem="6Dw-MD-csW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="UfS-02-EFP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LA6-yI-Bga" secondAttribute="bottom" id="aoS-nF-r2O"/>
-                <constraint firstItem="LA6-yI-Bga" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yf2-r6-zG2"/>
+                <constraint firstItem="LA6-yI-Bga" firstAttribute="top" secondItem="6Dw-MD-csW" secondAttribute="bottom" constant="31" id="fXA-DX-mWR"/>
+                <constraint firstItem="LA6-yI-Bga" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="qBz-CK-Z22"/>
+                <constraint firstItem="6Dw-MD-csW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xaF-ox-Jvw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="bookTable" destination="LA6-yI-Bga" id="UCL-8U-EwR"/>
-                <outlet property="sadasd" destination="HoE-aj-T4D" id="jrF-KJ-get"/>
+                <outlet property="searchBarBackground" destination="6Dw-MD-csW" id="fTX-tl-k48"/>
+                <outlet property="tableView" destination="LA6-yI-Bga" id="Mzd-Iu-b2O"/>
             </connections>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="bc_nav bar" width="375" height="102"/>
+    </resources>
 </document>

@@ -1,5 +1,6 @@
 # Useful extensions
 github "Wolox/wolmo-core-ios" "swift-3.2-compatibility"
+github "Wolox/wolmo-networking-ios" "swift-3.2-compatibility"
 
 # Miscellaneous
 github "rollbar/rollbar-ios" "master"

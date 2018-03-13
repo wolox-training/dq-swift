@@ -29,16 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = ViewController() { [window = self.window] _ in
-            let books = [
-                Book(
-                    title: "El principito",
-                    author: ["John Dow"],
-                    description: "Un libro que leen todos en la escuela",
-                    image: URL(string: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG")!
-                )
-            ]
-            window?.rootViewController = BookIndexController(books: books)
+        let rootViewController = ViewController { [unowned self] _ in
+            self.window?.rootViewController = BookIndexController(bookIndexViewModel: BookIndexViewModel())
         }
         GoogleLoginService.shared.bootstrap(
             clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
@@ -86,6 +78,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. 
         // See also applicationDidEnterBackground:.
     }
-    
-
 }
