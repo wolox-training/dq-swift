@@ -16,6 +16,30 @@ internal final class BookViewModel {
         _book = book
     }
     
+    var id: Int {
+        return _book.id
+    }
+    
+    var publisher: String {
+        return _book.publisher
+    }
+    
+    var year: String {
+        return _book.year
+    }
+    
+    var genre: String {
+        return _book.genre
+    }
+    
+    var createdAt: String {
+        return _book.createdAt
+    }
+    
+    var updatedAt: String {
+        return _book.updatedAt
+    }
+    
     var title: String {
         return _book.title
     }
@@ -24,11 +48,10 @@ internal final class BookViewModel {
         return _book.author
     }
     
-    var description: String {
-        return _book.description
+    var imageURL: URL? {
+        return _book.imageURL
     }
     
-    var imageURL: URL? {
-        return URL(string: _book.imageURL)
-    }
 }
+
+

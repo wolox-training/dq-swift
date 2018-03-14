@@ -7,30 +7,45 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 internal final class BookIndexViewModel {
 
-    private let _bookViewModels: [BookViewModel]
+    var bookViewModels: MutableProperty<[BookViewModel]> = MutableProperty([])
     
-    init() {
-        _bookViewModels = [
-            Book(
+    private let _bookRepository: BookRepositoryType
+    
+    init(bookRepository: BookRepositoryType) {
+        
+        _bookRepository = bookRepository
+        
+        bookViewModels <~ bookRepository.fetchBooks()
+            .map { $0.map { BookViewModel(book: $0) }  }
+            .liftError()
+        
+//        bookRepository.fetchBooks()
+//            .map { $0.map { BookViewModel(book:$0) }  }
+//            .startWithValues { [unowned self] booksViewModel in
+//                self._bookViewModels.value = booksViewModel
+//            }
+        
+            /*Book(
                 title: "El principito sdfsdfsdfsdfsdfsdfsdfsdfsdf",
                 author: "John Dow",
                 description: "Un libro que leen todos en la escuela",
                 imageURL: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG"
             )
-        ].map { BookViewModel(book: $0) }
+        ].map { BookViewModel(book: $0) }*/
     }
 }
 
 internal extension BookIndexViewModel {
     
     var count: Int {
-        return _bookViewModels.count
+        return bookViewModels.value.count
     }
     
     subscript(index: Int) -> BookViewModel {
-        return _bookViewModels[index]
+        return bookViewModels.value[index]
     }
 }

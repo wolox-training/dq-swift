@@ -25,13 +25,18 @@ final internal class BookIndexController: UIViewController {
 
     override func loadView() {
         view = _view
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        
+        _bookIndexViewModel.bookViewModels.producer.startWithValues {
+            print($0)
+            print($0)
+        }
     }
+    
 }
 
 extension BookIndexController: UITableViewDelegate, UITableViewDataSource {

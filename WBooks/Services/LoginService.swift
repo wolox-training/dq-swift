@@ -9,11 +9,16 @@
 import Foundation
 import Result
 import GoogleSignIn
+import Networking
 
-struct User {
+public struct User: AuthenticableUser {
     
-    let userId: String
+    public let userId: String
     
+    public var sessionToken: String? {
+        return "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNDksInZlcmlmaWNhdGlvbl9jb2RlIjoiZkNmQWJ1bmpfS0xmVkp6cjhIeWQ3dHc1VlJSa1ZNQi1iNFhZWnlHd0pYc3NMenpUVm1uY3RHLTVGcFBxRHhocyIsInJlbmV3X2lkIjoiY3RTVjJ5X3hyc0hKSm55dzZCblhXMmlfUFozdnpiWTZFc3hTRjFVZ2ZzSnJvRDRrb0YteXpvdjFfY3lUOUh3diIsIm1heGltdW1fdXNlZnVsX2RhdGUiOjE1MjM2MzQ2NTgsImV4cGlyYXRpb25fZGF0ZSI6MTUyMTIxNTQ1OCwid2FybmluZ19leHBpcmF0aW9uX2RhdGUiOjE1MjEwNjA2NTh9.OML6xqc7vrIXsBeVdZnyIJ5v23kz1gA7qSTscGSXD5Y"
+    }
+
 }
 
 fileprivate extension User {
@@ -41,6 +46,8 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     
     static let shared = GoogleLoginService()
     
+    public let sessionManager = SessionManager()
+
     private let googleService = GIDSignIn.sharedInstance()!
     private var presenter: UIViewController? = .none
     private var callback: ((Result<User, LoginError>) -> Void)? = .none
@@ -59,7 +66,9 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
         if error != nil {
             result = .failure(.serviceProviderFailure(error))
         } else if user != nil {
-            result = .success(User.from(googleUser: user))
+            let authenticatedUser = User.from(googleUser: user)
+            result = .success(authenticatedUser)
+            sessionManager.login(user: authenticatedUser)
         } else {
             fatalError("There is not error nor user!")
         }
