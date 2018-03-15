@@ -19,15 +19,31 @@ internal final class BookIndexViewModel {
         
         _bookRepository = bookRepository
         
-        bookViewModels <~ bookRepository.fetchBooks()
-            .map { $0.map { BookViewModel(book: $0) }  }
-            .liftError()
-        
-//        bookRepository.fetchBooks()
-//            .map { $0.map { BookViewModel(book:$0) }  }
-//            .startWithValues { [unowned self] booksViewModel in
-//                self._bookViewModels.value = booksViewModel
+//        bookViewModels <~ bookRepository.fetchBooks()
+//            .map {
+//                print(">>>>>>> \($0)")
+//                return $0.map { book in
+//                    print(">>>>>>>>>>>>>>>>>>>>> FOO")
+//                    return BookViewModel(book: book)
+//                }
 //            }
+//            .liftError()
+        
+        bookRepository.fetchBooks()
+            .map({ (books) -> [BookViewModel] in
+                return books.map({ (book) -> BookViewModel in
+                    return BookViewModel(book: book)
+                })
+            })
+            .startWithResult { [unowned self] result in
+                switch result {
+                case .success(let bookViewModel):
+                    self.bookViewModels.value = bookViewModel
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
         
             /*Book(
                 title: "El principito sdfsdfsdfsdfsdfsdfsdfsdfsdf",

@@ -32,14 +32,6 @@ internal final class BookViewModel {
         return _book.genre
     }
     
-    var createdAt: String {
-        return _book.createdAt
-    }
-    
-    var updatedAt: String {
-        return _book.updatedAt
-    }
-    
     var title: String {
         return _book.title
     }
@@ -51,7 +43,5 @@ internal final class BookViewModel {
     var imageURL: URL? {
         return _book.imageURL
     }
-    
+
 }
-
-

@@ -46,11 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 sessionManager: GoogleLoginService.shared.sessionManager
             )
 
-            NetworkActivityLogger.shared.startLogging()
             NetworkActivityLogger.shared.level = .debug
             NetworkActivityIndicatorManager.shared.isEnabled = true
+            NetworkActivityLogger.shared.startLogging()
             
-            self.window?.rootViewController = BookIndexController(bookIndexViewModel: BookIndexViewModel(bookRepository: booksRepository))
+            self.window?.rootViewController =
+                BookIndexController(bookIndexViewModel: BookIndexViewModel(bookRepository: booksRepository))
         }
         GoogleLoginService.shared.bootstrap(
             clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
