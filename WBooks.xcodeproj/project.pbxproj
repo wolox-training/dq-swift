@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0A8C572052E6E200AD40D7 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A8C562052E6E200AD40D7 /* LoginService.swift */; };
+		0C0A8C5E2052FB7E00AD40D7 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0A8C5C2052FB7D00AD40D7 /* GoogleSignIn.framework */; };
+		0C0A8C5F2052FB7E00AD40D7 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0A8C5D2052FB7D00AD40D7 /* GoogleSignInDependencies.framework */; };
+		0C0A8C612052FBA200AD40D7 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C0A8C602052FBA200AD40D7 /* GoogleSignIn.bundle */; };
+		0C0A8C632052FD8600AD40D7 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0A8C622052FD8600AD40D7 /* SafariServices.framework */; };
+		0C0A8C66205312EE00AD40D7 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A8C65205312EE00AD40D7 /* Foo.m */; };
+		0C8BAB4A2051C9210030E394 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BAB492051C9210030E394 /* View.xib */; };
+		0C8BAB4C2051CAEC0030E394 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BAB4B2051CAEC0030E394 /* View.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -60,6 +68,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C0A8C562052E6E200AD40D7 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginService.swift; path = Services/LoginService.swift; sourceTree = "<group>"; };
+		0C0A8C5C2052FB7D00AD40D7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = WBooks/Frameworks/GoogleSignIn/GoogleSignIn.framework; sourceTree = "<group>"; };
+		0C0A8C5D2052FB7D00AD40D7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignInDependencies.framework; path = WBooks/Frameworks/GoogleSignIn/GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		0C0A8C602052FBA200AD40D7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = WBooks/Frameworks/GoogleSignIn/GoogleSignIn.bundle; sourceTree = "<group>"; };
+		0C0A8C622052FD8600AD40D7 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		0C0A8C64205312EE00AD40D7 /* WBooks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WBooks-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C0A8C65205312EE00AD40D7 /* Foo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
+		0C8BAB492051C9210030E394 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		0C8BAB4B2051CAEC0030E394 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0A8C632052FD8600AD40D7 /* SafariServices.framework in Frameworks */,
+				0C0A8C5E2052FB7E00AD40D7 /* GoogleSignIn.framework in Frameworks */,
+				0C0A8C5F2052FB7E00AD40D7 /* GoogleSignInDependencies.framework in Frameworks */,
 				E1530D9E1ED382EA002A9002 /* SystemConfiguration.framework in Frameworks */,
 				E1530D991ED378F2002A9002 /* Rollbar.framework in Frameworks */,
 				CED9348B1E8466CE0017CF96 /* MBProgressHUD.framework in Frameworks */,
@@ -123,9 +143,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8BAB482051C8B40030E394 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C9512AF2052CDC400592F61 /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C9512AF2052CDC400592F61 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BAB492051C9210030E394 /* View.xib */,
+				9D1575061CB1B27500EA395E /* ViewController.swift */,
+				0C8BAB4B2051CAEC0030E394 /* View.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
+				0C0A8C602052FBA200AD40D7 /* GoogleSignIn.bundle */,
 				9D6E405F1CB1BA21008CE558 /* Frameworks */,
 				9D1575031CB1B27500EA395E /* WBooks */,
 				9D1575181CB1B27500EA395E /* WBooksTests */,
@@ -147,14 +186,16 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				0C8BAB482051C8B40030E394 /* Views */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
-				9D1575061CB1B27500EA395E /* ViewController.swift */,
+				0C0A8C65205312EE00AD40D7 /* Foo.m */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
+				0C0A8C64205312EE00AD40D7 /* WBooks-Bridging-Header.h */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -180,6 +221,9 @@
 		9D6E405F1CB1BA21008CE558 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C0A8C622052FD8600AD40D7 /* SafariServices.framework */,
+				0C0A8C5C2052FB7D00AD40D7 /* GoogleSignIn.framework */,
+				0C0A8C5D2052FB7D00AD40D7 /* GoogleSignInDependencies.framework */,
 				E1530D9D1ED382EA002A9002 /* SystemConfiguration.framework */,
 				E1530D981ED378F2002A9002 /* Rollbar.framework */,
 				CED9348A1E8466CE0017CF96 /* MBProgressHUD.framework */,
@@ -208,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				E1530D9B1ED37905002A9002 /* RollbarService.swift */,
+				0C0A8C562052E6E200AD40D7 /* LoginService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -283,7 +328,7 @@
 				TargetAttributes = {
 					9D1575001CB1B27500EA395E = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 					9D1575141CB1B27500EA395E = {
@@ -323,7 +368,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0A8C612052FBA200AD40D7 /* GoogleSignIn.bundle in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
+				0C8BAB4A2051C9210030E394 /* View.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +434,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				0C0A8C572052E6E200AD40D7 /* LoginService.swift in Sources */,
+				0C0A8C66205312EE00AD40D7 /* Foo.m in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				0C8BAB4C2051CAEC0030E394 /* View.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
@@ -492,19 +542,24 @@
 			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/WBooks/Frameworks",
+					"$(PROJECT_DIR)/WBooks/Frameworks/GoogleSignIn",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WBooks/WBooks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -597,11 +652,14 @@
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-alpha";
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/WBooks/Frameworks",
+					"$(PROJECT_DIR)/WBooks/Frameworks/GoogleSignIn",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -610,6 +668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.alpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WBooks/WBooks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -702,11 +761,14 @@
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/WBooks/Frameworks",
+					"$(PROJECT_DIR)/WBooks/Frameworks/GoogleSignIn",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -714,6 +776,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WBooks/WBooks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -805,11 +868,14 @@
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-production";
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/WBooks/Frameworks",
+					"$(PROJECT_DIR)/WBooks/Frameworks/GoogleSignIn",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -817,6 +883,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WBooks.WBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WBooks/WBooks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
