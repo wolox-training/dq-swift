@@ -21,6 +21,7 @@ internal final class BookIndexViewModel {
     
     init(bookRepository: BookRepositoryType) {
         _bookRepository = bookRepository
+
         bookViewModels = Property(_bookViewModels)
     }
     
