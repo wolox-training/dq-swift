@@ -34,24 +34,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let rootViewController = ViewController { [unowned self] _ in
-            let networkingConfiguration = NetworkingConfiguration(
-                useSecureConnection: false,
-                domainURL: "wbooks-api-stage.herokuapp.com",
-                subdomainURL: "/api/v1",
-                usePinningCertificate: false
-            )
+//            let networkingConfiguration = NetworkingConfiguration(
+//                useSecureConnection: false,
+//                domainURL: "wbooks-api-stage.herokuapp.com",
+//                subdomainURL: "/api/v1",
+//                usePinningCertificate: false
+//            )
             
-            let booksRepository = BookRepository(
+           /* let booksRepository = BookRepository(
                 networkingConfiguration: networkingConfiguration,
                 sessionManager: GoogleLoginService.shared.sessionManager
-            )
+            )*/
 
             NetworkActivityLogger.shared.level = .debug
             NetworkActivityIndicatorManager.shared.isEnabled = true
             NetworkActivityLogger.shared.startLogging()
+            let navBarAppearence = UINavigationBar.appearance()
             
-            self.window?.rootViewController =
-                BookIndexController(bookIndexViewModel: BookIndexViewModel(bookRepository: booksRepository))
+            navBarAppearence.setBackgroundImage(UIImage(), for: .default)
+            navBarAppearence.shadowImage = UIImage()
+            navBarAppearence.isTranslucent = true
+            navBarAppearence.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            
+            let navBarViewController = TabBarViewController()
+            
+            self.window?.rootViewController = navBarViewController
+                //BookIndexController(bookIndexViewModel: BookIndexViewModel(bookRepository: booksRepository))
         }
         GoogleLoginService.shared.bootstrap(
             clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
