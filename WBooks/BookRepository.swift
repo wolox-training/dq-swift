@@ -15,16 +15,18 @@ import GoogleSignIn
 
 protocol BookRepositoryType {
     
-    func fetchBooks() -> SignalProducer<[Book], RepositoryError>
+    func fetchBooks(page: Int) -> SignalProducer<[Book], RepositoryError>
     
 }
 
 internal class BookRepository: AbstractRepository, BookRepositoryType {
     
-    public func fetchBooks() -> SignalProducer<[Book], RepositoryError> {
-        return performRequest(method: .get, path: "/books", parameters: nil) {
+    private static let PageKey = "page"
+    
+    public func fetchBooks(page: Int) -> SignalProducer<[Book], RepositoryError> {
+        let parameters = [BookRepository.PageKey: page, "amount": 10]
+        return performRequest(method: .get, path: "/books", parameters: parameters) {
             return decode($0).toResult()
         }
     }
-    
 }

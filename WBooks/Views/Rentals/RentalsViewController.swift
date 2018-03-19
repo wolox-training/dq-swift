@@ -10,7 +10,6 @@ import UIKit
 
 class RentalsViewController: UIViewController {
     
-
     override func viewDidLoad() {
         navigationItem.title = "RENTALS"
         super.viewDidLoad()
@@ -23,7 +22,6 @@ class RentalsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
