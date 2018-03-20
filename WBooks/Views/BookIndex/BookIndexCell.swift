@@ -8,6 +8,7 @@
 
 import UIKit
 import Core
+import Utils
 
 final internal class BookIndexCell: UITableViewCell, NibLoadable {
 
@@ -18,10 +19,14 @@ final internal class BookIndexCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var bookAuthors: UILabel!
     @IBOutlet weak var cellContainer: UIView!
     
+    let imageFetcher: ImageFetcher = ImageFetcher()
+    
     func configureCell(for viewModel: BookViewModel) {
         bookTitle.text = viewModel.title
         bookAuthors.text = viewModel.author
-        configureImage(urlBook: viewModel.imageURL)
+        configureImage(url: viewModel.imageURL)
+
+        
         
         cellContainer.layer.cornerRadius = 5
         cellContainer.backgroundColor = UIColor.white
@@ -37,22 +42,19 @@ final internal class BookIndexCell: UITableViewCell, NibLoadable {
 
 private extension BookIndexCell {
     
-    func configureImage(urlBook: URL?) {
-        guard let url = urlBook else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print("Failed fetching image \(error.debugDescription)")
-                return
+    func configureImage(url: URL?) {
+        
+        guard let imageURL = url else { return }
+        imageFetcher.fetchImage(imageURL).startWithResult {[unowned self] result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.bookImage.image = image
+                }
+                
+            case .failure(let error):
+                print(error)
             }
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("Not a proper HTTPURLResponse or statusCode")
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.bookImage.image = UIImage(data: data!)
-            }
-        }.resume()
+        }
     }
 }
