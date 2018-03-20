@@ -21,8 +21,6 @@ protocol BookRepositoryType {
 
 internal class BookRepository: AbstractRepository, BookRepositoryType {
     
-    let token = GoogleLoginService.shared.sessionManager.sessionToken
-    
     public func fetchBooks() -> SignalProducer<[Book], RepositoryError> {
         return performRequest(method: .get, path: "/books", parameters: nil) {
             return decode($0).toResult()
