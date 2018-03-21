@@ -24,17 +24,22 @@ class TabBarViewController: UITabBarController {
 // MARK: - Private Methods
 fileprivate extension TabBarViewController {
     
-    func configureTabBar() {
+    fileprivate func createRepository() -> BookRepositoryType {
         let networkingConfiguration = NetworkingConfiguration(
             useSecureConnection: false,
             domainURL: "wbooks-api-stage.herokuapp.com",
             subdomainURL: "/api/v1",
             usePinningCertificate: false)
-        
-        let booksRepository = BookRepository(
+        return BookRepository(
             networkingConfiguration: networkingConfiguration,
             sessionManager: GoogleLoginService.shared.sessionManager
         )
+    }
+    
+    func configureTabBar() {
+        
+        let booksRepository = createRepository()
+        
         tabBar.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9).cgColor
         
         let libraryViewController = UINavigationController(

@@ -25,23 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let rootViewController = ViewController { [unowned self] _ in
-
-            NetworkActivityLogger.shared.level = .debug
-            NetworkActivityIndicatorManager.shared.isEnabled = true
-            NetworkActivityLogger.shared.startLogging()
-            let navBarAppearence = UINavigationBar.appearance()
-            
-            navBarAppearence.setBackgroundImage(UIImage(), for: .default)
-            navBarAppearence.shadowImage = UIImage()
-            navBarAppearence.isTranslucent = true
-            navBarAppearence.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            
-            let navBarViewController = TabBarViewController()
-            
-            self.window?.rootViewController = navBarViewController
-            
-        }
+        let rootViewController = createViewController()
+        
         GoogleLoginService.shared.bootstrap(
             clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
             presenter: rootViewController
@@ -58,4 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return GoogleLoginService.shared.handle(url: url, options: options)
     }
 
+}
+
+private extension AppDelegate {
+    
+    func createViewController() -> ViewController {
+        return ViewController { [unowned self] _ in
+            
+            NetworkActivityLogger.shared.level = .debug
+            NetworkActivityIndicatorManager.shared.isEnabled = true
+            NetworkActivityLogger.shared.startLogging()
+            let navBarAppearence = UINavigationBar.appearance()
+            
+            navBarAppearence.setBackgroundImage(UIImage(), for: .default)
+            navBarAppearence.shadowImage = UIImage()
+            navBarAppearence.isTranslucent = true
+            navBarAppearence.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            
+            let navBarViewController = TabBarViewController()
+            
+            self.window?.rootViewController = navBarViewController
+            
+        }
+    }
 }
