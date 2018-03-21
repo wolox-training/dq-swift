@@ -32,7 +32,9 @@ final internal class BookIndexController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         _viewModel.initializeBookRepository()
+        navigationItem.title = _viewModel.navigationTitle
         configureTableView()
     }
     
@@ -63,13 +65,13 @@ private extension BookIndexController {
         _viewModel.bookViewModels.signal.observeValues { [unowned self] _ in
             self._view.tableView.reloadData()
         }
+        navigationController?.tabBarItem = UITabBarItem(title: _viewModel.tabBarTitle, image: nil, selectedImage: nil)
     }
     
     func configureTableView() {
         _view.tableView.delegate = self
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookIndexCell.self)
-  //      _view.tableView.rowHeight = BookIndexCell.Height
         _view.configureView()
     }
 
