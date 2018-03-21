@@ -9,6 +9,7 @@
 import UIKit
 import Core
 import Utils
+import ReactiveSwift
 
 final internal class BookIndexCell: UITableViewCell, NibLoadable {
 
@@ -45,13 +46,10 @@ private extension BookIndexCell {
     func configureImage(url: URL?) {
         
         guard let imageURL = url else { return }
-        imageFetcher.fetchImage(imageURL).startWithResult {[unowned self] result in
+        imageFetcher.fetchImage(imageURL).observe(on: UIScheduler()).startWithResult {[unowned self] result in
             switch result {
             case .success(let image):
-                DispatchQueue.main.async {
-                    self.bookImage.image = image
-                }
-                
+                self.bookImage.image = image
             case .failure(let error):
                 print(error)
             }
