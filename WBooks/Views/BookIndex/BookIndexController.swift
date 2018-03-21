@@ -61,21 +61,14 @@ extension BookIndexController: UITableViewDelegate, UITableViewDataSource {
     }
     
     internal func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        
-        print("scrollViewWillBeginDragging")
         isDataLoading = false
     }
     
     internal func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        print("scrollViewDidEndDecelerating")
-        
     }
     //Pagination
     internal func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        print("scrollViewDidEndDragging")
-        print(_view.tableView.contentOffset.y)
         
         if (_view.tableView.contentOffset.y + _view.tableView.frame.size.height + 150)
             >= _view.tableView.contentSize.height {
