@@ -9,16 +9,30 @@
 import Foundation
 import Result
 import GoogleSignIn
+import Networking
 
-struct User {
+public struct User: AuthenticableUser {
     
-    let email: String
+    public let userId: String
+    
+    public var sessionToken: String? {
+        return "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNDksInZlcmlmaWNhdGlvbl9jb2RlIjoiZkNmQWJ1bmpfS0xmVkp6cjhIeWQ3dHc1VlJSa1ZNQi1iNFhZWnlHd0pYc3NMenpUVm1uY3RHLTVGcFBxRHhocyIsInJlbmV3X2lkIjoiUERzYVlNeGViZlVlaDd1VUdydWZoTER0MjhESkNHcEQxeTNRMXN5M3ZVZEdRUUtRVVVZZl9Udm14WjczY0I3TiIsIm1heGltdW1fdXNlZnVsX2RhdGUiOjE1MjQyMzA3NDAsImV4cGlyYXRpb25fZGF0ZSI6MTUyMTgxMTU0MCwid2FybmluZ19leHBpcmF0aW9uX2RhdGUiOjE1MjE2NTY3NDB9.nwM6WxFROBSxOcMokpt0WPtHLoacoFF7hHv_j6ooswg"
+    }
+
+}
+
+fileprivate extension User {
+    
+    static func from(googleUser: GIDGoogleUser) -> User {
+        return User(userId: googleUser.userID)
+    }
     
 }
 
 enum LoginError: Error {
     
-    case invalidCredentials
+    case alreadyLogginIn
+    case serviceProviderFailure(Error)
     
 }
 
@@ -32,8 +46,11 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     
     static let shared = GoogleLoginService()
     
+    public let sessionManager = SessionManager()
+
     private let googleService = GIDSignIn.sharedInstance()!
     private var presenter: UIViewController? = .none
+    private var callback: ((Result<User, LoginError>) -> Void)? = .none
     
     private override init() { }
     
@@ -45,13 +62,20 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // TODO construir el result
+        let result: Result<User, LoginError>
         if error != nil {
-            print(error)
+            result = .failure(.serviceProviderFailure(error))
         } else if user != nil {
-            print(user)
+            let authenticatedUser = User.from(googleUser: user)
+            result = .success(authenticatedUser)
+            sessionManager.login(user: authenticatedUser)
         } else {
-            print("WTF!")
+            fatalError("There is not error nor user!")
+        }
+        
+        if let callback = self.callback {
+            self.callback = .none
+            callback(result)
         }
     }
     
@@ -79,9 +103,15 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     }
     
     func login(callback: @escaping (Result<User, LoginError>) -> Void) {
+        guard self.callback == nil else {
+            callback(.failure(.alreadyLogginIn))
+            return
+        }
         if googleService.currentUser != nil {
-            
+            let user = User.from(googleUser: googleService.currentUser)
+            callback(.success(user))
         } else {
+            self.callback = callback
             googleService.signIn()
         }
     }

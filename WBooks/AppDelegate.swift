@@ -8,6 +8,9 @@
 
 import UIKit
 import GoogleSignIn
+import Networking
+import AlamofireNetworkActivityLogger
+import AlamofireNetworkActivityIndicator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,14 +30,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RollbarService().initialize()
          *
          */
+                
+        window = UIWindow(frame: UIScreen.main.bounds)
         
-        let rootViewController = ViewController()
+        let rootViewController = ViewController { [unowned self] _ in
+            let networkingConfiguration = NetworkingConfiguration(
+                useSecureConnection: false,
+                domainURL: "wbooks-api-stage.herokuapp.com",
+                subdomainURL: "/api/v1",
+                usePinningCertificate: false
+            )
+            
+            let booksRepository = BookRepository(
+                networkingConfiguration: networkingConfiguration,
+                sessionManager: GoogleLoginService.shared.sessionManager
+            )
+
+            NetworkActivityLogger.shared.level = .debug
+            NetworkActivityIndicatorManager.shared.isEnabled = true
+            NetworkActivityLogger.shared.startLogging()
+            
+            self.window?.rootViewController =
+                BookIndexController(bookIndexViewModel: BookIndexViewModel(bookRepository: booksRepository))
+        }
         GoogleLoginService.shared.bootstrap(
             clientId: "121090626106-ce89jpgcrf8ga811ucd5sk2nl55mcumm.apps.googleusercontent.com",
             presenter: rootViewController
         )
         
-        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
@@ -76,6 +99,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. 
         // See also applicationDidEnterBackground:.
     }
-    
-
 }

@@ -15,6 +15,24 @@
 		0C0A8C66205312EE00AD40D7 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0A8C65205312EE00AD40D7 /* Foo.m */; };
 		0C8BAB4A2051C9210030E394 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BAB492051C9210030E394 /* View.xib */; };
 		0C8BAB4C2051CAEC0030E394 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BAB4B2051CAEC0030E394 /* View.swift */; };
+		0C963BF620580E14008E96F2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C963BF520580E14008E96F2 /* Book.swift */; };
+		0C963BF820580FAE008E96F2 /* BookIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C963BF720580FAE008E96F2 /* BookIndexViewModel.swift */; };
+		0C963BFA20581134008E96F2 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C963BF920581134008E96F2 /* BookViewModel.swift */; };
+		0C963C0020587DB4008E96F2 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C963BFF20587DB3008E96F2 /* Networking.framework */; };
+		0CA2F7E32059549100949EE1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E22059549000949EE1 /* Alamofire.framework */; };
+		0CA2F7E5205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E4205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework */; };
+		0CA2F7E7205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E6205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework */; };
+		0CA2F7E9205954C700949EE1 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E8205954C700949EE1 /* Argo.framework */; };
+		0CA2F7EB205954D300949EE1 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EA205954D300949EE1 /* Curry.framework */; };
+		0CA2F7ED2059550800949EE1 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EC2059550700949EE1 /* KeychainSwift.framework */; };
+		0CA2F7EF2059553700949EE1 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EE2059553700949EE1 /* Runes.framework */; };
+		0CA2F7F12059629000949EE1 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2F7F02059629000949EE1 /* BookRepository.swift */; };
+		0CA51F85206197B900BDE285 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA51F84206197B800BDE285 /* Utils.framework */; };
+		0CC13C422056F8210075EBF4 /* BookIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC13C412056F8210075EBF4 /* BookIndexView.xib */; };
+		0CC13C442056F9210075EBF4 /* BookIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13C432056F9210075EBF4 /* BookIndexView.swift */; };
+		0CC13C48205702F20075EBF4 /* BookIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC13C47205702F20075EBF4 /* BookIndexCell.xib */; };
+		0CC13C4A205704A10075EBF4 /* BookIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13C49205704A10075EBF4 /* BookIndexCell.swift */; };
+		0CC13C4C205705A10075EBF4 /* BookIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13C4B205705A10075EBF4 /* BookIndexController.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -77,6 +95,24 @@
 		0C0A8C65205312EE00AD40D7 /* Foo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		0C8BAB492051C9210030E394 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		0C8BAB4B2051CAEC0030E394 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		0C963BF520580E14008E96F2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		0C963BF720580FAE008E96F2 /* BookIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexViewModel.swift; sourceTree = "<group>"; };
+		0C963BF920581134008E96F2 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		0C963BFF20587DB3008E96F2 /* Networking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Networking.framework; path = Carthage/Build/iOS/Networking.framework; sourceTree = "<group>"; };
+		0CA2F7E22059549000949EE1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		0CA2F7E4205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
+		0CA2F7E6205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
+		0CA2F7E8205954C700949EE1 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		0CA2F7EA205954D300949EE1 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		0CA2F7EC2059550700949EE1 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		0CA2F7EE2059553700949EE1 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		0CA2F7F02059629000949EE1 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		0CA51F84206197B800BDE285 /* Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utils.framework; path = Carthage/Build/iOS/Utils.framework; sourceTree = "<group>"; };
+		0CC13C412056F8210075EBF4 /* BookIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookIndexView.xib; sourceTree = "<group>"; };
+		0CC13C432056F9210075EBF4 /* BookIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexView.swift; sourceTree = "<group>"; };
+		0CC13C47205702F20075EBF4 /* BookIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookIndexCell.xib; sourceTree = "<group>"; };
+		0CC13C49205704A10075EBF4 /* BookIndexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexCell.swift; sourceTree = "<group>"; };
+		0CC13C4B205705A10075EBF4 /* BookIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexController.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +147,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA2F7E7205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
+				0CA2F7E5205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
+				0CA2F7E32059549100949EE1 /* Alamofire.framework in Frameworks */,
+				0CA2F7E9205954C700949EE1 /* Argo.framework in Frameworks */,
+				0CA2F7EB205954D300949EE1 /* Curry.framework in Frameworks */,
 				0C0A8C632052FD8600AD40D7 /* SafariServices.framework in Frameworks */,
 				0C0A8C5E2052FB7E00AD40D7 /* GoogleSignIn.framework in Frameworks */,
 				0C0A8C5F2052FB7E00AD40D7 /* GoogleSignInDependencies.framework in Frameworks */,
@@ -121,6 +162,10 @@
 				CED934891E8466A60017CF96 /* ReactiveSwift.framework in Frameworks */,
 				9D6E405A1CB1B93A008CE558 /* ReactiveCocoa.framework in Frameworks */,
 				9D6E405B1CB1B93A008CE558 /* Result.framework in Frameworks */,
+				0CA2F7EF2059553700949EE1 /* Runes.framework in Frameworks */,
+				0C963C0020587DB4008E96F2 /* Networking.framework in Frameworks */,
+				0CA2F7ED2059550800949EE1 /* KeychainSwift.framework in Frameworks */,
+				0CA51F85206197B900BDE285 /* Utils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +191,8 @@
 		0C8BAB482051C8B40030E394 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C963BF420580DFF008E96F2 /* Models */,
+				0CC13C3E2056F7460075EBF4 /* BookIndex */,
 				0C9512AF2052CDC400592F61 /* Login */,
 			);
 			path = Views;
@@ -159,6 +206,28 @@
 				0C8BAB4B2051CAEC0030E394 /* View.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		0C963BF420580DFF008E96F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C963BF520580E14008E96F2 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0CC13C3E2056F7460075EBF4 /* BookIndex */ = {
+			isa = PBXGroup;
+			children = (
+				0CC13C412056F8210075EBF4 /* BookIndexView.xib */,
+				0CC13C432056F9210075EBF4 /* BookIndexView.swift */,
+				0CC13C47205702F20075EBF4 /* BookIndexCell.xib */,
+				0CC13C49205704A10075EBF4 /* BookIndexCell.swift */,
+				0CC13C4B205705A10075EBF4 /* BookIndexController.swift */,
+				0C963BF720580FAE008E96F2 /* BookIndexViewModel.swift */,
+				0C963BF920581134008E96F2 /* BookViewModel.swift */,
+			);
+			path = BookIndex;
 			sourceTree = "<group>";
 		};
 		9D1574F81CB1B27500EA395E = {
@@ -221,6 +290,15 @@
 		9D6E405F1CB1BA21008CE558 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CA51F84206197B800BDE285 /* Utils.framework */,
+				0CA2F7EE2059553700949EE1 /* Runes.framework */,
+				0CA2F7EC2059550700949EE1 /* KeychainSwift.framework */,
+				0CA2F7EA205954D300949EE1 /* Curry.framework */,
+				0CA2F7E8205954C700949EE1 /* Argo.framework */,
+				0CA2F7E6205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework */,
+				0CA2F7E4205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework */,
+				0CA2F7E22059549000949EE1 /* Alamofire.framework */,
+				0C963BFF20587DB3008E96F2 /* Networking.framework */,
 				0C0A8C622052FD8600AD40D7 /* SafariServices.framework */,
 				0C0A8C5C2052FB7D00AD40D7 /* GoogleSignIn.framework */,
 				0C0A8C5D2052FB7D00AD40D7 /* GoogleSignInDependencies.framework */,
@@ -253,6 +331,7 @@
 			children = (
 				E1530D9B1ED37905002A9002 /* RollbarService.swift */,
 				0C0A8C562052E6E200AD40D7 /* LoginService.swift */,
+				0CA2F7F02059629000949EE1 /* BookRepository.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -369,7 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C0A8C612052FBA200AD40D7 /* GoogleSignIn.bundle in Resources */,
+				0CC13C422056F8210075EBF4 /* BookIndexView.xib in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
+				0CC13C48205702F20075EBF4 /* BookIndexCell.xib in Resources */,
 				0C8BAB4A2051C9210030E394 /* View.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -404,6 +485,15 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Core.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rollbar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Networking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Utils.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -433,12 +523,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C963BFA20581134008E96F2 /* BookViewModel.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				0CC13C4C205705A10075EBF4 /* BookIndexController.swift in Sources */,
 				0C0A8C572052E6E200AD40D7 /* LoginService.swift in Sources */,
+				0C963BF620580E14008E96F2 /* Book.swift in Sources */,
+				0CC13C4A205704A10075EBF4 /* BookIndexCell.swift in Sources */,
 				0C0A8C66205312EE00AD40D7 /* Foo.m in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				0CC13C442056F9210075EBF4 /* BookIndexView.swift in Sources */,
 				0C8BAB4C2051CAEC0030E394 /* View.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				0C963BF820580FAE008E96F2 /* BookIndexViewModel.swift in Sources */,
+				0CA2F7F12059629000949EE1 /* BookRepository.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

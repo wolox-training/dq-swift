@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="253" id="9kZ-rJ-hfb" customClass="BookIndexCell" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9kZ-rJ-hfb" id="ZPM-6S-s7e">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="252.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-vr-e1u">
+                        <rect key="frame" x="0.0" y="5" width="375" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-0s-L5Z">
+                                <rect key="frame" x="90" y="15" width="90" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-sw-lhY">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Book authors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-Nt-pPb">
+                                        <rect key="frame" x="0.0" y="25.5" width="90" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-a5-O4f">
+                                <rect key="frame" x="30" y="15" width="40" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1b4-sm-dDK"/>
+                                    <constraint firstAttribute="width" constant="40" id="Mzl-Gc-Akt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.03376295417547226" green="0.976573646068573" blue="0.68759042024612427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pmV-a5-O4f" firstAttribute="top" secondItem="vmT-vr-e1u" secondAttribute="top" constant="15" id="UxX-Su-ktm"/>
+                            <constraint firstItem="Bt0-0s-L5Z" firstAttribute="top" secondItem="pmV-a5-O4f" secondAttribute="top" id="Wge-Aq-O13"/>
+                            <constraint firstAttribute="bottom" secondItem="pmV-a5-O4f" secondAttribute="bottom" constant="15" id="Z5H-RQ-yaP"/>
+                            <constraint firstItem="pmV-a5-O4f" firstAttribute="leading" secondItem="vmT-vr-e1u" secondAttribute="leading" constant="30" id="bit-Hu-3XT"/>
+                            <constraint firstItem="Bt0-0s-L5Z" firstAttribute="leading" secondItem="pmV-a5-O4f" secondAttribute="trailing" constant="20" id="qcy-dQ-Xfd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vmT-vr-e1u" secondAttribute="bottom" constant="5" id="Arx-Sb-lyv"/>
+                    <constraint firstItem="vmT-vr-e1u" firstAttribute="top" secondItem="ZPM-6S-s7e" secondAttribute="top" constant="5" id="baI-Il-c9b"/>
+                    <constraint firstItem="vmT-vr-e1u" firstAttribute="leading" secondItem="ZPM-6S-s7e" secondAttribute="leading" id="dMN-4D-KXh"/>
+                    <constraint firstAttribute="trailing" secondItem="vmT-vr-e1u" secondAttribute="trailing" id="qft-Rn-6x1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bookAuthors" destination="fHJ-Nt-pPb" id="lba-zl-DAD"/>
+                <outlet property="bookImage" destination="pmV-a5-O4f" id="Bua-K8-Kae"/>
+                <outlet property="bookTitle" destination="4a5-sw-lhY" id="SQY-Aa-sa1"/>
+                <outlet property="cellContainer" destination="vmT-vr-e1u" id="FLK-lV-isa"/>
+            </connections>
+            <point key="canvasLocation" x="371.5" y="281.5"/>
+        </tableViewCell>
+    </objects>
+</document>
