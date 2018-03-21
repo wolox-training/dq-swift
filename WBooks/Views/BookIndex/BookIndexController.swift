@@ -32,7 +32,7 @@ final internal class BookIndexController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        _viewModel.initializeBookRepository()
         configureTableView()
     }
     
