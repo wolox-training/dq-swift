@@ -15,9 +15,8 @@ final internal class BookIndexView: UIView, NibLoadable {
     @IBOutlet weak var searchBarBackground: UIImageView!
     
     func configureView() {
-        
-        self.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
+        backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
         tableView.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
-        
     }
+    
 }

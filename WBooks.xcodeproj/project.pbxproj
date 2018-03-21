@@ -19,6 +19,9 @@
 		0C963BF820580FAE008E96F2 /* BookIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C963BF720580FAE008E96F2 /* BookIndexViewModel.swift */; };
 		0C963BFA20581134008E96F2 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C963BF920581134008E96F2 /* BookViewModel.swift */; };
 		0C963C0020587DB4008E96F2 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C963BFF20587DB3008E96F2 /* Networking.framework */; };
+		0C998ACF205C30E5008EF62B /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C998ACE205C30E5008EF62B /* WishlistViewController.swift */; };
+		0C998AD1205C3100008EF62B /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C998AD0205C3100008EF62B /* AddNewViewController.swift */; };
+		0C998AD3205C3117008EF62B /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C998AD2205C3117008EF62B /* RentalsViewController.swift */; };
 		0CA2F7E32059549100949EE1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E22059549000949EE1 /* Alamofire.framework */; };
 		0CA2F7E5205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E4205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework */; };
 		0CA2F7E7205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7E6205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework */; };
@@ -28,6 +31,7 @@
 		0CA2F7EF2059553700949EE1 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EE2059553700949EE1 /* Runes.framework */; };
 		0CA2F7F12059629000949EE1 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2F7F02059629000949EE1 /* BookRepository.swift */; };
 		0CA51F85206197B900BDE285 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA51F84206197B800BDE285 /* Utils.framework */; };
+		0CA69EAD205AF25F00152C75 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */; };
 		0CC13C422056F8210075EBF4 /* BookIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC13C412056F8210075EBF4 /* BookIndexView.xib */; };
 		0CC13C442056F9210075EBF4 /* BookIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13C432056F9210075EBF4 /* BookIndexView.swift */; };
 		0CC13C48205702F20075EBF4 /* BookIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC13C47205702F20075EBF4 /* BookIndexCell.xib */; };
@@ -99,6 +103,9 @@
 		0C963BF720580FAE008E96F2 /* BookIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexViewModel.swift; sourceTree = "<group>"; };
 		0C963BF920581134008E96F2 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		0C963BFF20587DB3008E96F2 /* Networking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Networking.framework; path = Carthage/Build/iOS/Networking.framework; sourceTree = "<group>"; };
+		0C998ACE205C30E5008EF62B /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		0C998AD0205C3100008EF62B /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		0C998AD2205C3117008EF62B /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
 		0CA2F7E22059549000949EE1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0CA2F7E4205954A000949EE1 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
 		0CA2F7E6205954BB00949EE1 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
@@ -108,6 +115,7 @@
 		0CA2F7EE2059553700949EE1 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		0CA2F7F02059629000949EE1 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		0CA51F84206197B800BDE285 /* Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utils.framework; path = Carthage/Build/iOS/Utils.framework; sourceTree = "<group>"; };
+		0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0CC13C412056F8210075EBF4 /* BookIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookIndexView.xib; sourceTree = "<group>"; };
 		0CC13C432056F9210075EBF4 /* BookIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexView.swift; sourceTree = "<group>"; };
 		0CC13C47205702F20075EBF4 /* BookIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookIndexCell.xib; sourceTree = "<group>"; };
@@ -191,7 +199,10 @@
 		0C8BAB482051C8B40030E394 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C963BF420580DFF008E96F2 /* Models */,
+				0C998AC8205C256A008EF62B /* TabBar */,
+				0C998ACD205C30A6008EF62B /* Rentals */,
+				0C998ACC205C2F9A008EF62B /* AddNew */,
+				0C998ACB205C2F7B008EF62B /* Wishlist */,
 				0CC13C3E2056F7460075EBF4 /* BookIndex */,
 				0C9512AF2052CDC400592F61 /* Login */,
 			);
@@ -212,20 +223,60 @@
 			isa = PBXGroup;
 			children = (
 				0C963BF520580E14008E96F2 /* Book.swift */,
+				0C963BF920581134008E96F2 /* BookViewModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0C998AC8205C256A008EF62B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0C998AC9205C25EF008EF62B /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CC13C47205702F20075EBF4 /* BookIndexCell.xib */,
+				0CC13C49205704A10075EBF4 /* BookIndexCell.swift */,
+			);
+			path = BookCell;
+			sourceTree = "<group>";
+		};
+		0C998ACB205C2F7B008EF62B /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				0C998ACE205C30E5008EF62B /* WishlistViewController.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		0C998ACC205C2F9A008EF62B /* AddNew */ = {
+			isa = PBXGroup;
+			children = (
+				0C998AD0205C3100008EF62B /* AddNewViewController.swift */,
+			);
+			path = AddNew;
+			sourceTree = "<group>";
+		};
+		0C998ACD205C30A6008EF62B /* Rentals */ = {
+			isa = PBXGroup;
+			children = (
+				0C998AD2205C3117008EF62B /* RentalsViewController.swift */,
+			);
+			path = Rentals;
 			sourceTree = "<group>";
 		};
 		0CC13C3E2056F7460075EBF4 /* BookIndex */ = {
 			isa = PBXGroup;
 			children = (
+				0C998AC9205C25EF008EF62B /* BookCell */,
 				0CC13C412056F8210075EBF4 /* BookIndexView.xib */,
 				0CC13C432056F9210075EBF4 /* BookIndexView.swift */,
-				0CC13C47205702F20075EBF4 /* BookIndexCell.xib */,
-				0CC13C49205704A10075EBF4 /* BookIndexCell.swift */,
 				0CC13C4B205705A10075EBF4 /* BookIndexController.swift */,
 				0C963BF720580FAE008E96F2 /* BookIndexViewModel.swift */,
-				0C963BF920581134008E96F2 /* BookViewModel.swift */,
 			);
 			path = BookIndex;
 			sourceTree = "<group>";
@@ -255,6 +306,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				0C963BF420580DFF008E96F2 /* Models */,
 				0C8BAB482051C8B40030E394 /* Views */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
@@ -523,6 +575,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C998AD3205C3117008EF62B /* RentalsViewController.swift in Sources */,
+				0C998AD1205C3100008EF62B /* AddNewViewController.swift in Sources */,
+				0CA69EAD205AF25F00152C75 /* TabBarViewController.swift in Sources */,
 				0C963BFA20581134008E96F2 /* BookViewModel.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				0CC13C4C205705A10075EBF4 /* BookIndexController.swift in Sources */,
@@ -535,6 +590,7 @@
 				0C8BAB4C2051CAEC0030E394 /* View.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				0C963BF820580FAE008E96F2 /* BookIndexViewModel.swift in Sources */,
+				0C998ACF205C30E5008EF62B /* WishlistViewController.swift in Sources */,
 				0CA2F7F12059629000949EE1 /* BookRepository.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);

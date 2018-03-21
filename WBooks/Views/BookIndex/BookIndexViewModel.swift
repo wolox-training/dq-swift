@@ -8,43 +8,26 @@
 
 import UIKit
 import ReactiveSwift
+import enum Result.NoError
 
 internal final class BookIndexViewModel {
 
-    var bookViewModels: MutableProperty<[BookViewModel]> = MutableProperty([])
+    let navigationTitle = "LIBRARY"
+    let tabBarTitle = "Library"
+    let bookViewModels: Property<[BookViewModel]>
     
-    private let _bookRepository: BookRepositoryType
-    
-    func initializeBookRepository() {
-            
-            _bookRepository.fetchBooks()
-                .map({ (books) -> [BookViewModel] in
-                    return books.map({ (book) -> BookViewModel in
-                        return BookViewModel(book: book)
-                    })
-                })
-                .startWithResult { [unowned self] result in
-                    switch result {
-                    case .success(let bookViewModel):
-                        self.bookViewModels.value = bookViewModel
-                        
-                    case .failure(let error):
-                        print(error)
-                    }
-        }
-    }
+    fileprivate let _bookViewModels = MutableProperty<[BookViewModel]>([])
+    fileprivate let _bookRepository: BookRepositoryType
     
     init(bookRepository: BookRepositoryType) {
-        
         _bookRepository = bookRepository
-        
-            /*Book(
-                title: "El principito sdfsdfsdfsdfsdfsdfsdfsdfsdf",
-                author: "John Dow",
-                description: "Un libro que leen todos en la escuela",
-                imageURL: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG"
-            )
-        ].map { BookViewModel(book: $0) }*/
+        bookViewModels = Property(_bookViewModels)
+    }
+    
+    func initializeBookRepository() {
+        _bookViewModels <~ _bookRepository.fetchBooks()
+            .map { $0.map { BookViewModel(book: $0) } }
+            .liftError()
     }
 }
 
@@ -57,4 +40,5 @@ internal extension BookIndexViewModel {
     subscript(index: Int) -> BookViewModel {
         return bookViewModels.value[index]
     }
+    
 }
