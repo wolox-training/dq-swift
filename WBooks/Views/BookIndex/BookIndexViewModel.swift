@@ -36,14 +36,12 @@ internal final class BookIndexViewModel {
                     
                 case .success(let books):
                     self._bookViewModels.value += books
+                    self.nextPage += 1
                     
                 case .failure(let error):
                     print(error)
                 }
             }
-        
-        nextPage += 1
-
     }
 }
 
