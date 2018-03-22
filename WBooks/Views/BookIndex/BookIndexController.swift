@@ -14,6 +14,8 @@ final internal class BookIndexController: UIViewController {
     private lazy var _view: BookIndexView = BookIndexView.loadFromNib()!
     private let _viewModel: BookIndexViewModel
     
+    var isDataLoading: Bool = false
+    
     init(bookIndexViewModel: BookIndexViewModel) {
         _viewModel = bookIndexViewModel
         
@@ -33,7 +35,9 @@ final internal class BookIndexController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _viewModel.initializeBookRepository()
+
+        _viewModel.getMoreBooks()
+
         navigationItem.title = _viewModel.navigationTitle
         configureTableView()
     }
@@ -56,6 +60,25 @@ extension BookIndexController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    internal func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isDataLoading = false
+    }
+    
+    internal func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+    }
+    //Pagination
+    internal func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        if (_view.tableView.contentOffset.y + _view.tableView.frame.size.height + 150)
+            >= _view.tableView.contentSize.height {
+            if !isDataLoading {
+                isDataLoading = true
+                _viewModel.getMoreBooks()
+            }
+        }
+        
+    }
 }
 
 // MARK: - Private Methods
@@ -74,5 +97,5 @@ private extension BookIndexController {
         _view.tableView.register(cell: BookIndexCell.self)
         _view.configureView()
     }
-
+    
 }

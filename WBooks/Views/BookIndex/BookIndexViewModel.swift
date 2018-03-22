@@ -15,19 +15,33 @@ internal final class BookIndexViewModel {
     let navigationTitle = "LIBRARY"
     let tabBarTitle = "Library"
     let bookViewModels: Property<[BookViewModel]>
+    var nextPage = 1
     
-    fileprivate let _bookViewModels = MutableProperty<[BookViewModel]>([])
-    fileprivate let _bookRepository: BookRepositoryType
+
+    private let _bookRepository: BookRepositoryType
+    private var _bookViewModels = MutableProperty<[BookViewModel]>([])
     
     init(bookRepository: BookRepositoryType) {
         _bookRepository = bookRepository
-        bookViewModels = Property(_bookViewModels)
+        bookViewModels = Property<[BookViewModel]>(_bookViewModels)
+        
     }
     
-    func initializeBookRepository() {
-        _bookViewModels <~ _bookRepository.fetchBooks()
+    func getMoreBooks() {
+        _bookRepository.fetchBooks(page: nextPage)
             .map { $0.map { BookViewModel(book: $0) } }
-            .liftError()
+            .take(first: 1)
+            .startWithResult { result in
+                switch result {
+                    
+                case .success(let books):
+                    self._bookViewModels.value += books
+                    self.nextPage += 1
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
 }
 
