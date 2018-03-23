@@ -9,11 +9,19 @@
 import UIKit
 
 class AddNewViewController: UIViewController {
+    
+    private lazy var _view: AddNewView = AddNewView.loadFromNib()!
 
+    override func loadView() {
+        view = _view
+    }
+    
     override func viewDidLoad() {
         navigationItem.title = "ADD NEW"
         super.viewDidLoad()
-
+        
+        _view.configureView()
+        
         // Do any additional setup after loading the view.
     }
 

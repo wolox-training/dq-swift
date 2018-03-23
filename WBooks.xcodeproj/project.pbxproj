@@ -37,6 +37,8 @@
 		0CA51F85206197B900BDE285 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA51F84206197B800BDE285 /* Utils.framework */; };
 		0CA2F7F12059629000949EE1 /* WBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2F7F02059629000949EE1 /* WBooksRepository.swift */; };
 		0CA33B9320653095008220EA /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA33B9220653095008220EA /* Rent.swift */; };
+		0CA33B9520657BB2008220EA /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA33B9420657BB2008220EA /* AddNewView.xib */; };
+		0CA33B9720658063008220EA /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA33B9620658063008220EA /* AddNewView.swift */; };
 		0CA69EAD205AF25F00152C75 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */; };
 		0CA9F37C2063EBF000D8C2D1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9F37B2063EBF000D8C2D1 /* Comment.swift */; };
 		0CA9F37E2063ECCC00D8C2D1 /* WBooksUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9F37D2063ECCC00D8C2D1 /* WBooksUser.swift */; };
@@ -133,6 +135,8 @@
 		0CA51F84206197B800BDE285 /* Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utils.framework; path = Carthage/Build/iOS/Utils.framework; sourceTree = "<group>"; };
 		0CA2F7F02059629000949EE1 /* WBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksRepository.swift; sourceTree = "<group>"; };
 		0CA33B9220653095008220EA /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
+		0CA33B9420657BB2008220EA /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
+		0CA33B9620658063008220EA /* AddNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
 		0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0CA9F37B2063EBF000D8C2D1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0CA9F37D2063ECCC00D8C2D1 /* WBooksUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUser.swift; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				0C998AD0205C3100008EF62B /* AddNewViewController.swift */,
+				0CA33B9420657BB2008220EA /* AddNewView.xib */,
+				0CA33B9620658063008220EA /* AddNewView.swift */,
 			);
 			path = AddNew;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				0C0A8C612052FBA200AD40D7 /* GoogleSignIn.bundle in Resources */,
 				0CE53EA220601F580055FA5A /* BookInformationView.xib in Resources */,
 				0C9E09042062CCEE0059FF45 /* BookInformationCellView.xib in Resources */,
+				0CA33B9520657BB2008220EA /* AddNewView.xib in Resources */,
 				0CC13C422056F8210075EBF4 /* BookIndexView.xib in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
 				0C9E09072062E24A0059FF45 /* BookCommentsCellView.xib in Resources */,
@@ -649,6 +656,7 @@
 				0C9E09012062A7BD0059FF45 /* BookInformationCellView.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				0CA9F37E2063ECCC00D8C2D1 /* WBooksUser.swift in Sources */,
+				0CA33B9720658063008220EA /* AddNewView.swift in Sources */,
 				0C9B5E892064233100572559 /* BookCommentsCellView.swift in Sources */,
 				0CC13C4C205705A10075EBF4 /* BookIndexController.swift in Sources */,
 				0C0A8C572052E6E200AD40D7 /* LoginService.swift in Sources */,
