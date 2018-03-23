@@ -36,10 +36,16 @@ final internal class BookIndexController: UIViewController {
         super.viewDidLoad()
         
 
+
         _viewModel.getMoreBooks()
+
 
         navigationItem.title = _viewModel.navigationTitle
         configureTableView()
+
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = .white
+        
     }
     
 }
@@ -60,7 +66,19 @@ extension BookIndexController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let controller = BookInformationViewController(bookViewModel: _viewModel[indexPath.row])
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     internal func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+
         isDataLoading = false
     }
     
@@ -95,6 +113,7 @@ private extension BookIndexController {
         _view.tableView.delegate = self
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookIndexCell.self)
+        _view.tableView.separatorStyle = .none
         _view.configureView()
     }
     

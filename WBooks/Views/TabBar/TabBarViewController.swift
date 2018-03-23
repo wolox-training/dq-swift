@@ -24,27 +24,26 @@ class TabBarViewController: UITabBarController {
 // MARK: - Private Methods
 fileprivate extension TabBarViewController {
     
-    fileprivate func createRepository() -> BookRepositoryType {
-        let networkingConfiguration = NetworkingConfiguration(
-            useSecureConnection: false,
-            domainURL: "wbooks-api-stage.herokuapp.com",
-            subdomainURL: "/api/v1",
-            usePinningCertificate: false)
-        return BookRepository(
-            networkingConfiguration: networkingConfiguration,
-            sessionManager: GoogleLoginService.shared.sessionManager
-        )
-    }
-    
+
     func configureTabBar() {
-        
-        let booksRepository = createRepository()
-        
+//        let networkingConfiguration = NetworkingConfiguration(
+//            useSecureConnection: false,
+//            domainURL: "wbooks-api-stage.herokuapp.com",
+//            subdomainURL: "/api/v1",
+//            usePinningCertificate: false)
+//
+//        let booksRepository = BookRepository(
+//            networkingConfiguration: networkingConfiguration,
+//            sessionManager: GoogleLoginService.shared.sessionManager
+//        )
+
         tabBar.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9).cgColor
         
         let libraryViewController = UINavigationController(
             rootViewController: BookIndexController(
-                bookIndexViewModel: BookIndexViewModel(bookRepository: booksRepository)
+
+                bookIndexViewModel: BookIndexViewModel(bookRepository: RepositoryCreator.shared.bookRepository)
+
             )
         )
         

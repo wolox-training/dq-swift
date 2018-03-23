@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0lc-NQ-5jC" customClass="BookInformationView" customModule="WBooks">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="BPF-eZ-vaW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ApY-Fu-o2T">
+                    <rect key="frame" x="20" y="122" width="335" height="545"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ApY-Fu-o2T" firstAttribute="bottom" secondItem="aro-gJ-2jT" secondAttribute="bottom" id="3I6-kY-LwK"/>
+                <constraint firstItem="BPF-eZ-vaW" firstAttribute="top" secondItem="0lc-NQ-5jC" secondAttribute="top" id="Dvd-JK-KDu"/>
+                <constraint firstItem="BPF-eZ-vaW" firstAttribute="leading" secondItem="aro-gJ-2jT" secondAttribute="leading" id="T5V-bg-90o"/>
+                <constraint firstItem="BPF-eZ-vaW" firstAttribute="trailing" secondItem="aro-gJ-2jT" secondAttribute="trailing" id="UJN-HX-GbI"/>
+                <constraint firstAttribute="trailing" secondItem="ApY-Fu-o2T" secondAttribute="trailing" constant="20" id="WlZ-yh-gib"/>
+                <constraint firstItem="ApY-Fu-o2T" firstAttribute="top" secondItem="BPF-eZ-vaW" secondAttribute="bottom" constant="20" id="bgo-Fn-eSX"/>
+                <constraint firstItem="ApY-Fu-o2T" firstAttribute="leading" secondItem="aro-gJ-2jT" secondAttribute="leading" constant="20" id="zzA-ph-2Ru"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aro-gJ-2jT"/>
+            <connections>
+                <outlet property="tableView" destination="ApY-Fu-o2T" id="Qlm-0e-EBT"/>
+            </connections>
+            <point key="canvasLocation" x="4.5" y="-233.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bc_nav bar" width="375" height="102"/>
+    </resources>
+</document>

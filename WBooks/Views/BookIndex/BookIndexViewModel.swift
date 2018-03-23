@@ -25,6 +25,7 @@ internal final class BookIndexViewModel {
         _bookRepository = bookRepository
         bookViewModels = Property<[BookViewModel]>(_bookViewModels)
         
+
     }
     
     func getMoreBooks() {
@@ -36,12 +37,14 @@ internal final class BookIndexViewModel {
                     
                 case .success(let books):
                     self._bookViewModels.value += books
+
                     self.nextPage += 1
                     
                 case .failure(let error):
                     print(error)
                 }
             }
+
     }
 }
 
