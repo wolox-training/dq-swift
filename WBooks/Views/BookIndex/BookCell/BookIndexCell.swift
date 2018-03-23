@@ -21,21 +21,18 @@ final internal class BookIndexCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var cellContainer: UIView!
     
     var disposable: Disposable?
+    let imageFetcher: ImageFetcher = ImageFetcher()
     
     override func prepareForReuse() {
         disposable?.dispose()
         disposable = .none
     }
-    
-    let imageFetcher: ImageFetcher = ImageFetcher()
-    
+
     func configureCell(for viewModel: BookViewModel) {
         bookTitle.text = viewModel.title
         bookAuthors.text = viewModel.author
         configureImage(url: viewModel.imageURL)
 
-        
-        
         cellContainer.layer.cornerRadius = 5
         cellContainer.backgroundColor = UIColor.white
         cellContainer.layer.shadowOffset = CGSize(width: 0, height: 1)

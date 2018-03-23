@@ -17,7 +17,6 @@ internal final class BookIndexViewModel {
     let bookViewModels: Property<[BookViewModel]>
     var nextPage = 1
     
-
     private let _bookRepository: BookRepositoryType
     private var _bookViewModels = MutableProperty<[BookViewModel]>([])
     
@@ -25,7 +24,6 @@ internal final class BookIndexViewModel {
         _bookRepository = bookRepository
         bookViewModels = Property<[BookViewModel]>(_bookViewModels)
         
-
     }
     
     func getMoreBooks() {

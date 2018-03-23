@@ -8,6 +8,8 @@
 
 import UIKit
 import Core
+import Utils
+import ReactiveSwift
 
 class BookInformationCellView: UITableViewCell, NibLoadable {
     
@@ -22,8 +24,12 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
     @IBOutlet weak var wishlistButton: UIButton!
     @IBOutlet weak var rentButton: UIButton!
     
+    var disposable: Disposable?
+    let imageFetcher: ImageFetcher = ImageFetcher()
+
     func configureCell(for viewModel: BookViewModel, isAvailable: Bool) {
         
+        configureImage(url: viewModel.imageURL)
         bookTitle.text = viewModel.title
         bookAuthor.text = viewModel.author
         bookYear.text = viewModel.year
@@ -47,17 +53,7 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
         rentButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
         rentButton.sizeToFit()
         
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: 275, height: 50)
-        gradient.colors = [
-            UIColor(red: 0, green: 0.68, blue: 0.93, alpha: 1).cgColor,
-            UIColor(red: 0.22, green: 0.8, blue: 0.8, alpha: 1).cgColor
-        ]
-        gradient.locations = [0, 1]
-        gradient.startPoint = CGPoint(x: 0.06, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1, y: 0.5)
-        gradient.cornerRadius = 25
-        rentButton.layer.addSublayer(gradient)
+        rentButton.blueGradient()
         
         bookImage.image = UIImage(named: "img_book6")
         
@@ -71,18 +67,7 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
             bookAvailability.text = "Not Available"
             rentButton.isEnabled = false
             
-            let gradient = CAGradientLayer()
-            gradient.frame = CGRect(x: 0, y: 0, width: 275, height: 50)
-            gradient.colors = [
-                UIColor(red: 0.79, green: 0.79, blue: 0.79, alpha: 1).cgColor,
-                UIColor(red: 0.87, green: 0.87, blue: 0.87, alpha: 1).cgColor,
-                UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1).cgColor
-            ]
-            gradient.locations = [0, 0.45230788, 1]
-            gradient.startPoint = CGPoint(x: 0, y: 0.5)
-            gradient.endPoint = CGPoint(x: 1, y: 0.5)
-            gradient.cornerRadius = 25
-            rentButton.layer.addSublayer(gradient)
+            rentButton.greyGradient()
 
         }
         
@@ -92,5 +77,49 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
 
 extension UIButton {
     
-    func 
+    func greyGradient() {
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: 275, height: 50)
+        gradient.colors = [
+            UIColor(red: 0.79, green: 0.79, blue: 0.79, alpha: 1).cgColor,
+            UIColor(red: 0.87, green: 0.87, blue: 0.87, alpha: 1).cgColor,
+            UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1).cgColor
+        ]
+        gradient.locations = [0, 0.45230788, 1]
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        gradient.cornerRadius = 25
+        self.layer.addSublayer(gradient)
+    }
+    
+    func blueGradient() {
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: 275, height: 50)
+        gradient.colors = [
+            UIColor(red: 0, green: 0.68, blue: 0.93, alpha: 1).cgColor,
+            UIColor(red: 0.22, green: 0.8, blue: 0.8, alpha: 1).cgColor
+        ]
+        gradient.locations = [0, 1]
+        gradient.startPoint = CGPoint(x: 0.06, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        gradient.cornerRadius = 25
+        self.layer.addSublayer(gradient)
+    }
+    
+}
+
+private extension BookInformationCellView {
+    
+    func configureImage(url: URL?) {
+        
+        guard let imageURL = url else { return }
+        disposable = imageFetcher.fetchImage(imageURL).observe(on: UIScheduler()).startWithResult {[unowned self] result in
+            switch result {
+            case .success(let image):
+                self.bookImage.image = image
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

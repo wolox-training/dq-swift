@@ -35,10 +35,7 @@ final internal class BookIndexController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
         _viewModel.getMoreBooks()
-
 
         navigationItem.title = _viewModel.navigationTitle
         configureTableView()
@@ -66,7 +63,6 @@ extension BookIndexController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let controller = BookInformationViewController(bookViewModel: _viewModel[indexPath.row])
