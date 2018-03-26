@@ -20,7 +20,7 @@ class BookInformationViewController: UIViewController {
 
     init(bookViewModel viewModel: BookViewModel) {
         self.bookViewModel = viewModel
-        self.bookInformationViewModel = BookInformationViewModel(bookViewModel: viewModel)
+        self.bookInformationViewModel = BookInformationViewModel(bookID: viewModel.id)
         super.init(nibName: nil, bundle: nil)
         bindViewModel()
     }
