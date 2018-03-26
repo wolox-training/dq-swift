@@ -28,6 +28,7 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
     
     var disposable: Disposable?
     let imageFetcher: ImageFetcher = ImageFetcher()
+    private var firstTime: Bool = true
     
     override func prepareForReuse() {
         disposable?.dispose()
@@ -35,16 +36,21 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
     }
     
     override func layoutSubviews() {
+        
+        
         if let button = rentButton {
-            rentButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
-            rentButton.blueGradient()
-            if !available {
-                bookAvailability.textColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
-                bookAvailability.text = "Not Available"
-                rentButton.isEnabled = false
-                
-                rentButton.greyGradient()
-                
+            if firstTime {
+                rentButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
+                rentButton.blueGradient()
+                if !available {
+                    bookAvailability.textColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
+                    bookAvailability.text = "Not Available"
+                    rentButton.isEnabled = false
+                    
+                    rentButton.greyGradient()
+                    
+                }
+                firstTime = false
             }
         }
     }
@@ -114,7 +120,7 @@ extension UIButton {
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         gradient.cornerRadius = 25
-        self.layer.addSublayer(gradient)
+        self.layer.insertSublayer(gradient, below: self.titleLabel?.layer)
         
     }
     
