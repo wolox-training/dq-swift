@@ -26,8 +26,6 @@ internal final class BookInformationViewModel {
         self.bookID = bookID
         comments = Property<[Comment]>(_comments)
         rents = Property<[Rent]>(_rents)
-        getComments()
-        getRents()
     }
     
     func getComments() {

@@ -35,6 +35,8 @@ class BookInformationViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         _view.configureBookInformation()
+        bookInformationViewModel.getComments()
+        bookInformationViewModel.getRents()
         
     }
 
