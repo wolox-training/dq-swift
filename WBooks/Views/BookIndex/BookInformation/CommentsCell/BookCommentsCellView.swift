@@ -20,6 +20,11 @@ class BookCommentsCellView: UITableViewCell, NibLoadable {
     var disposable: Disposable?
     let imageFetcher: ImageFetcher = ImageFetcher()
     
+    override func prepareForReuse() {
+        disposable?.dispose()
+        disposable = .none
+    }
+    
     func configureCell(comment: Comment) {
         configureImage(url: comment.user.imageURL)
         userComment.text = comment.content
