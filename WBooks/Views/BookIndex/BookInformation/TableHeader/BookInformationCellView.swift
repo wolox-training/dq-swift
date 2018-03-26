@@ -130,7 +130,7 @@ extension UIButton {
         gradient.startPoint = CGPoint(x: 0.06, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         gradient.cornerRadius = 25
-        self.layer.addSublayer(gradient)
+        self.layer.insertSublayer(gradient, below: self.titleLabel?.layer)
     }
     
 }

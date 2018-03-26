@@ -20,6 +20,12 @@ public class AddNewView: UIView, NibLoadable {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var descript: UITextField!
     
+//    func configureButton() {
+//        submitButton.blueGradient()
+//        submitButton.titleLabel?.text = "Submit"
+//        submitButton.titleLabel?.textColor = .white
+//    }
+    
     func configureView() {
         
         backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
@@ -36,6 +42,11 @@ public class AddNewView: UIView, NibLoadable {
         name.underlined()
         topic.underlined()
         descript.underlined()
+        
+        submitButton.titleLabel?.text = "SUBMIT"
+        submitButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
+        submitButton.layer.cornerRadius = 25
+        submitButton.blueGradient()
         
     }
 }

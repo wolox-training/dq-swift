@@ -16,6 +16,10 @@ class AddNewViewController: UIViewController {
         view = _view
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+//        _view.configureButton()
+    }
+    
     override func viewDidLoad() {
         navigationItem.title = "ADD NEW"
         super.viewDidLoad()
