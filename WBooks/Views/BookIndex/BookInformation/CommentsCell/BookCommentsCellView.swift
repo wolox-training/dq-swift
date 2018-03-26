@@ -25,9 +25,10 @@ class BookCommentsCellView: UITableViewCell, NibLoadable {
         userComment.text = comment.content
         userName.text = "\(comment.user.firstName) \(comment.user.lastName)"
         
+        self.selectionStyle = .none
+        
     }
 }
-
 
 private extension BookCommentsCellView {
     

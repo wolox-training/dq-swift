@@ -13,12 +13,10 @@ import enum Result.NoError
 
 class BookInformationViewController: UIViewController {
     
-    // swiftlint:disable:next identifier_name
-    private(set) lazy var _view: BookInformationView = BookInformationView.loadFromNib()!
+    private lazy var _view: BookInformationView = BookInformationView.loadFromNib()!
     
     var bookViewModel: BookViewModel
     var bookInformationViewModel: BookInformationViewModel
-//    var comments = MutableProperty<[Comment]>([])
 
     init(bookViewModel viewModel: BookViewModel) {
         self.bookViewModel = viewModel
@@ -53,15 +51,14 @@ extension BookInformationViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if bookInformationViewModel.count > 15 {
-//            return 15
-//        } else {
+        if bookInformationViewModel.count > 5 {
+            return 5
+        } else {
             return bookInformationViewModel.count
-//        }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: BookCommentsCellView = BookInformationCellView.loadFromNib()!
         let cell = tableView.dequeue(cell: BookCommentsCellView.self, for: indexPath)!
         cell.configureCell(comment: bookInformationViewModel[indexPath.row])
         return cell

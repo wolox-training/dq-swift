@@ -34,11 +34,11 @@
 		0CA2F7EB205954D300949EE1 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EA205954D300949EE1 /* Curry.framework */; };
 		0CA2F7ED2059550800949EE1 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EC2059550700949EE1 /* KeychainSwift.framework */; };
 		0CA2F7EF2059553700949EE1 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA2F7EE2059553700949EE1 /* Runes.framework */; };
-		0CA51F85206197B900BDE285 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA51F84206197B800BDE285 /* Utils.framework */; };
 		0CA2F7F12059629000949EE1 /* WBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2F7F02059629000949EE1 /* WBooksRepository.swift */; };
 		0CA33B9320653095008220EA /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA33B9220653095008220EA /* Rent.swift */; };
 		0CA33B9520657BB2008220EA /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA33B9420657BB2008220EA /* AddNewView.xib */; };
 		0CA33B9720658063008220EA /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA33B9620658063008220EA /* AddNewView.swift */; };
+		0CA51F85206197B900BDE285 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA51F84206197B800BDE285 /* Utils.framework */; };
 		0CA69EAD205AF25F00152C75 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */; };
 		0CA9F37C2063EBF000D8C2D1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9F37B2063EBF000D8C2D1 /* Comment.swift */; };
 		0CA9F37E2063ECCC00D8C2D1 /* WBooksUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9F37D2063ECCC00D8C2D1 /* WBooksUser.swift */; };
@@ -132,11 +132,11 @@
 		0CA2F7EA205954D300949EE1 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		0CA2F7EC2059550700949EE1 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
 		0CA2F7EE2059553700949EE1 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
-		0CA51F84206197B800BDE285 /* Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utils.framework; path = Carthage/Build/iOS/Utils.framework; sourceTree = "<group>"; };
 		0CA2F7F02059629000949EE1 /* WBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksRepository.swift; sourceTree = "<group>"; };
 		0CA33B9220653095008220EA /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		0CA33B9420657BB2008220EA /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
 		0CA33B9620658063008220EA /* AddNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
+		0CA51F84206197B800BDE285 /* Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Utils.framework; path = Carthage/Build/iOS/Utils.framework; sourceTree = "<group>"; };
 		0CA69EAC205AF25F00152C75 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0CA9F37B2063EBF000D8C2D1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0CA9F37D2063ECCC00D8C2D1 /* WBooksUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUser.swift; sourceTree = "<group>"; };
@@ -311,7 +311,6 @@
 			path = TableHeader;
 			sourceTree = "<group>";
 		};
-
 		0C9E09052062E2020059FF45 /* CommentsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,7 +320,6 @@
 			path = CommentsCell;
 			sourceTree = "<group>";
 		};
-
 		0CC13C3E2056F7460075EBF4 /* BookIndex */ = {
 			isa = PBXGroup;
 			children = (

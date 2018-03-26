@@ -22,7 +22,7 @@ internal final class BookInformationViewModel {
     
     init(bookViewModel: BookViewModel) {
 
-//        bookViewModels = Property<[BookViewModel]>(_bookViewModels)
+
         self.bookViewModel = bookViewModel
         comments = Property<[Comment]>(_comments)
         rents = Property<[Rent]>(_rents)

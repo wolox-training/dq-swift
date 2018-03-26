@@ -18,24 +18,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="148.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-1g-93H">
-                        <rect key="frame" x="0.0" y="22" width="45" height="45"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_user1" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-1g-93H">
+                        <rect key="frame" x="14" y="22" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="Ku2-6n-BgD"/>
                             <constraint firstAttribute="height" constant="45" id="QJq-5Z-TOu"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nrU-Tl-iHP">
-                        <rect key="frame" x="0.0" y="22" width="0.0" height="41"/>
+                        <rect key="frame" x="79" y="22" width="301" height="41"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5do-oj-L9U">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="18"/>
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-4f-dXz">
-                                <rect key="frame" x="0.0" y="23" width="0.0" height="18"/>
+                                <rect key="frame" x="0.0" y="23" width="301" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -59,4 +59,7 @@
             <point key="canvasLocation" x="-29" y="25.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="img_user1" width="45" height="45"/>
+    </resources>
 </document>

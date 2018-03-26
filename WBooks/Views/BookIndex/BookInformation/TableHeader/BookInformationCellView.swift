@@ -26,7 +26,12 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
     
     var disposable: Disposable?
     let imageFetcher: ImageFetcher = ImageFetcher()
-
+    
+    override func prepareForReuse() {
+        disposable?.dispose()
+        disposable = .none
+    }
+    
     func configureCell(for viewModel: BookViewModel, isAvailable: Bool) {
         
         configureImage(url: viewModel.imageURL)
@@ -113,10 +118,10 @@ private extension BookInformationCellView {
     func configureImage(url: URL?) {
         
         guard let imageURL = url else { return }
-        disposable = imageFetcher.fetchImage(imageURL).observe(on: UIScheduler()).startWithResult {[unowned self] result in
+        disposable = imageFetcher.fetchImage(imageURL).observe(on: UIScheduler()).startWithResult {[weak self] result in
             switch result {
             case .success(let image):
-                self.bookImage.image = image
+                self?.bookImage.image = image
             case .failure(let error):
                 print(error)
             }
