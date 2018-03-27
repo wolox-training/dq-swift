@@ -46,7 +46,7 @@ UINavigationControllerDelegate {
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.delegate = self
-                    imagePicker.sourceType = .photoLibrary;
+                    imagePicker.sourceType = .photoLibrary
                     imagePicker.allowsEditing = true
                     self.present(imagePicker, animated: true, completion: nil)
                 }
@@ -62,9 +62,9 @@ UINavigationControllerDelegate {
             switch action.style {
             case .default:
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                    var imagePicker = UIImagePickerController()
+                    let imagePicker = UIImagePickerController()
                     imagePicker.delegate = self
-                    imagePicker.sourceType = .camera;
+                    imagePicker.sourceType = .camera
                     imagePicker.allowsEditing = false
                     self.present(imagePicker, animated: true, completion: nil)
                 }
@@ -85,11 +85,11 @@ UINavigationControllerDelegate {
 //        }
         
     }
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
         //swiftlint:disable:next force_cast
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         _view.bookImage.image = image
-        dismiss(animated:true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func onTap(_ sender: Any) {
@@ -99,7 +99,7 @@ UINavigationControllerDelegate {
         let year: String = _view.year.text!
         let genre: String = _view.topic.text!
         let descript: String = _view.descript.text!
-        if (title == "" || author == "") {
+        if title == "" || author == "" {
             let alert = UIAlertController(title: "Error", message: "all fields must be complete",
                                           preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: nil))

@@ -44,7 +44,7 @@ internal class WBooksRepository: AbstractRepository, BookRepositoryType {
     }
     
     public func postSuggestion(title: String, author: String) {
-        let parameters = ["title": title, "author": author]
-        performRequest(method: .post, path: "/book_suggestions", parameters: parameters)
+        let parameters = ["title": title, "author": author, "link": "http://google.com"]
+        performRequest(method: .post, path: "/book_suggestions", parameters: parameters, headers: ["Content-Type":"application/json","Accept":"application/json"])
     }
 }

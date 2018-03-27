@@ -37,7 +37,6 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
     
     override func layoutSubviews() {
         
-        
         if let button = rentButton {
             if firstTime {
                 rentButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
