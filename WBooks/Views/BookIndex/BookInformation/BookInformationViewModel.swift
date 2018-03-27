@@ -22,7 +22,6 @@ internal final class BookInformationViewModel {
     
     init(bookID: Int) {
 
-
         self.bookID = bookID
         comments = Property<[Comment]>(_comments)
         rents = Property<[Rent]>(_rents)
@@ -30,7 +29,7 @@ internal final class BookInformationViewModel {
     
     func getComments() {
         
-        wBooksRepository.fetchComments(bookID: bookID).take(first: 1).startWithResult { result in
+        wBooksRepository.fetchComments(bookID: bookID).startWithResult { result in
             switch result {
                 
             case .success(let comments):
@@ -43,7 +42,7 @@ internal final class BookInformationViewModel {
     }
     func getRents() {
         
-        wBooksRepository.fetchRents(bookID: bookID).take(first: 1).startWithResult { result in
+        wBooksRepository.fetchRents(bookID: bookID).startWithResult { result in
             switch result {
                 
             case .success(let rents):
