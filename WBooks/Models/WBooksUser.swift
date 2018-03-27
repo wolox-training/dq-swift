@@ -21,6 +21,10 @@ internal struct WBooksUser {
     let commentsCounter: Int
     let unreadNotificationsCount: Int
     
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+    
     init(id: Int, firstName: String, lastName: String, email: String, imageURL: String?,
          rentsCounter: Int, commentsCounter: Int, unreadNotificationsCount: Int) {
         self.id = id
@@ -33,9 +37,6 @@ internal struct WBooksUser {
         self.unreadNotificationsCount = unreadNotificationsCount
     }
     
-    func getFullName() -> String {
-        return "\(firstName) \(lastName)"
-    }
 }
 
 extension WBooksUser: Argo.Decodable {

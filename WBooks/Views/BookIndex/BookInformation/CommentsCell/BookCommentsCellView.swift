@@ -28,7 +28,7 @@ class BookCommentsCellView: UITableViewCell, NibLoadable {
     func configureCell(comment: Comment) {
         configureImage(url: comment.user.imageURL)
         userComment.text = comment.content
-        userName.text = comment.user.getFullName()
+        userName.text = comment.user.fullName
         
         self.selectionStyle = .none
         
