@@ -16,9 +16,7 @@ public struct User: AuthenticableUser {
     public let userId: String
     
     public var sessionToken: String? {
-
-        return "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNDksInZlcmlmaWNhdGlvbl9jb2RlIjoiZkNmQWJ1bmpfS0xmVkp6cjhIeWQ3dHc1VlJSa1ZNQi1iNFhZWnlHd0pYc3NMenpUVm1uY3RHLTVGcFBxRHhocyIsInJlbmV3X2lkIjoiUERzYVlNeGViZlVlaDd1VUdydWZoTER0MjhESkNHcEQxeTNRMXN5M3ZVZEdRUUtRVVVZZl9Udm14WjczY0I3TiIsIm1heGltdW1fdXNlZnVsX2RhdGUiOjE1MjQyMzA3NDAsImV4cGlyYXRpb25fZGF0ZSI6MTUyMTgxMTU0MCwid2FybmluZ19leHBpcmF0aW9uX2RhdGUiOjE1MjE2NTY3NDB9.nwM6WxFROBSxOcMokpt0WPtHLoacoFF7hHv_j6ooswg"
-
+        return "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNDksInZlcmlmaWNhdGlvbl9jb2RlIjoiZkNmQWJ1bmpfS0xmVkp6cjhIeWQ3dHc1VlJSa1ZNQi1iNFhZWnlHd0pYc3NMenpUVm1uY3RHLTVGcFBxRHhocyIsInJlbmV3X2lkIjoiUWhhN1lGLVFrVUFOd2pDVUh2TWhLMlg2VThWLTEtTHlqZ0w5V19SSlliUHpzdFE3WEN5TnZGeExpUUNSWlZCXyIsIm1heGltdW1fdXNlZnVsX2RhdGUiOjE1MjQ2NTkyNzcsImV4cGlyYXRpb25fZGF0ZSI6MTUyMjI0MDA3Nywid2FybmluZ19leHBpcmF0aW9uX2RhdGUiOjE1MjIwODUyNzd9.feB6fURC6GuHTkP1nZ7GT6eaON1YzreidrWSeeTdG08"
     }
 
 }
@@ -94,8 +92,7 @@ final class GoogleLoginService: NSObject, LoginService, GIDSignInDelegate, GIDSi
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
+
     }
     
     func handle(url: URL, options: [UIApplicationOpenURLOptionsKey: Any]) -> Bool {

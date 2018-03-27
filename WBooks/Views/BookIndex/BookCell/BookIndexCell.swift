@@ -12,8 +12,6 @@ import Utils
 import ReactiveSwift
 
 final internal class BookIndexCell: UITableViewCell, NibLoadable {
-
-    //static let Height: CGFloat = 100.0
     
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
@@ -21,27 +19,26 @@ final internal class BookIndexCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var cellContainer: UIView!
     
     var disposable: Disposable?
+    let imageFetcher: ImageFetcher = ImageFetcher()
     
     override func prepareForReuse() {
         disposable?.dispose()
         disposable = .none
     }
-    
-    let imageFetcher: ImageFetcher = ImageFetcher()
-    
+
     func configureCell(for viewModel: BookViewModel) {
         bookTitle.text = viewModel.title
         bookAuthors.text = viewModel.author
         configureImage(url: viewModel.imageURL)
 
-        
-        
         cellContainer.layer.cornerRadius = 5
         cellContainer.backgroundColor = UIColor.white
         cellContainer.layer.shadowOffset = CGSize(width: 0, height: 1)
         cellContainer.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05).cgColor
         cellContainer.layer.shadowOpacity = 1
         cellContainer.layer.shadowRadius = 1
+        
+        self.selectionStyle = .none
         
         self.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
         

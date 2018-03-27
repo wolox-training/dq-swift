@@ -17,7 +17,6 @@ internal final class BookIndexViewModel {
     let bookViewModels: Property<[BookViewModel]>
     var nextPage = 1
     
-
     private let _bookRepository: BookRepositoryType
     private var _bookViewModels = MutableProperty<[BookViewModel]>([])
     
@@ -36,12 +35,14 @@ internal final class BookIndexViewModel {
                     
                 case .success(let books):
                     self._bookViewModels.value += books
+
                     self.nextPage += 1
                     
                 case .failure(let error):
                     print(error)
                 }
             }
+
     }
 }
 

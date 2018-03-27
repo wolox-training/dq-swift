@@ -22,16 +22,16 @@
                         <rect key="frame" x="0.0" y="5" width="375" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-0s-L5Z">
-                                <rect key="frame" x="90" y="15" width="90" height="43.5"/>
+                                <rect key="frame" x="90" y="15" width="275" height="43.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-sw-lhY">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Book authors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-Nt-pPb">
-                                        <rect key="frame" x="0.0" y="25.5" width="90" height="18"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="275" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -48,6 +48,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.03376295417547226" green="0.976573646068573" blue="0.68759042024612427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bt0-0s-L5Z" secondAttribute="trailing" constant="10" id="SeB-Ua-Kau"/>
                             <constraint firstItem="pmV-a5-O4f" firstAttribute="top" secondItem="vmT-vr-e1u" secondAttribute="top" constant="15" id="UxX-Su-ktm"/>
                             <constraint firstItem="Bt0-0s-L5Z" firstAttribute="top" secondItem="pmV-a5-O4f" secondAttribute="top" id="Wge-Aq-O13"/>
                             <constraint firstAttribute="bottom" secondItem="pmV-a5-O4f" secondAttribute="bottom" constant="15" id="Z5H-RQ-yaP"/>
