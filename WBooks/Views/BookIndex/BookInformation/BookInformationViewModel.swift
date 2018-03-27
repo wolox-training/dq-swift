@@ -63,8 +63,13 @@ internal final class BookInformationViewModel {
 
 internal extension BookInformationViewModel {
     
-    var count: Int {
+    var commentsCount: Int {
         return _comments.value.count
+    }
+    
+    var lastCommentsCount: Int {
+        if commentsCount > 5 { return 5}
+        return commentsCount
     }
     
     subscript(index: Int) -> Comment {
