@@ -51,6 +51,15 @@ public class AddNewView: UIView, NibLoadable {
         
     }
     
+    func clearFields() {
+        name.text = ""
+        author.text = ""
+        year.text = ""
+        topic.text = ""
+        descript.text = ""
+        bookImage.image = UIImage(named: "ic_add photo")
+    }
+    
 }
 
 extension UITextField {

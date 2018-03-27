@@ -19,37 +19,37 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlB-do-g5E">
                     <rect key="frame" x="20" y="123" width="335" height="534"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="GHr-wC-Z9E">
-                            <rect key="frame" x="20" y="153" width="295" height="290"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GHr-wC-Z9E">
+                            <rect key="frame" x="20" y="153" width="295" height="230"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vV-gx-nR4">
                                     <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mt-bg-BcW">
-                                    <rect key="frame" x="0.0" y="65" width="295" height="30"/>
+                                    <rect key="frame" x="0.0" y="50" width="295" height="30"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60d-Jc-4BP">
-                                    <rect key="frame" x="0.0" y="130" width="295" height="30"/>
+                                    <rect key="frame" x="0.0" y="100" width="295" height="30"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omh-Cn-Qo2">
-                                    <rect key="frame" x="0.0" y="195" width="295" height="30"/>
+                                    <rect key="frame" x="0.0" y="150" width="295" height="30"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qB6-t1-1yA">
-                                    <rect key="frame" x="0.0" y="260" width="295" height="30"/>
+                                    <rect key="frame" x="0.0" y="200" width="295" height="30"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>

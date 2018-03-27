@@ -33,6 +33,8 @@ UINavigationControllerDelegate {
         
         _view.imageButton.isUserInteractionEnabled = true
         
+        _view.submitButton.addTarget(self, action: #selector(onTap(_:)), for: .touchUpInside)
+        
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -88,6 +90,26 @@ UINavigationControllerDelegate {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         _view.bookImage.image = image
         dismiss(animated:true, completion: nil)
+    }
+    
+    @objc func onTap(_ sender: Any) {
+        let image: UIImage = _view.bookImage.image!
+        let title: String = _view.name.text!
+        let author: String = _view.author.text!
+        let year: String = _view.year.text!
+        let genre: String = _view.topic.text!
+        let descript: String = _view.descript.text!
+        if (title == "" || author == "") {
+            let alert = UIAlertController(title: "Error", message: "all fields must be complete",
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        RepositoryCreator.shared.bookRepository.postSuggestion(title: title, author: author)
+        
+        _view.clearFields()
     }
 
 }

@@ -42,4 +42,9 @@ internal class WBooksRepository: AbstractRepository, BookRepositoryType {
             return decode($0).toResult()
         }
     }
+    
+    public func postSuggestion(title: String, author: String) {
+        let parameters = ["title": title, "author": author]
+        performRequest(method: .post, path: "/book_suggestions", parameters: parameters)
+    }
 }
