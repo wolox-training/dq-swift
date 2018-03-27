@@ -20,10 +20,15 @@ class BookCommentsCellView: UITableViewCell, NibLoadable {
     var disposable: Disposable?
     let imageFetcher: ImageFetcher = ImageFetcher()
     
+    override func prepareForReuse() {
+        disposable?.dispose()
+        disposable = .none
+    }
+    
     func configureCell(comment: Comment) {
         configureImage(url: comment.user.imageURL)
         userComment.text = comment.content
-        userName.text = "\(comment.user.firstName) \(comment.user.lastName)"
+        userName.text = comment.user.fullName
         
         self.selectionStyle = .none
         

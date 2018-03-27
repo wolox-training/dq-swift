@@ -13,25 +13,24 @@ import enum Result.NoError
 
 internal final class BookInformationViewModel {
     
-    var bookViewModel: BookViewModel
+    var bookID: Int
     private var _comments = MutableProperty<[Comment]>([])
     let comments: Property<[Comment]>
     private var _rents = MutableProperty<[Rent]>([])
     let rents: Property<[Rent]>
     private let wBooksRepository: WBooksRepository = RepositoryCreator.shared.bookRepository
     
-    init(bookViewModel: BookViewModel) {
+    init(bookID: Int) {
 
-        self.bookViewModel = bookViewModel
+        self.bookID = bookID
+
         comments = Property<[Comment]>(_comments)
         rents = Property<[Rent]>(_rents)
-        getComments()
-        getRents()
     }
     
     func getComments() {
         
-        wBooksRepository.fetchComments(bookID: bookViewModel.id).take(first: 1).startWithResult { result in
+        wBooksRepository.fetchComments(bookID: bookID).startWithResult { result in
             switch result {
                 
             case .success(let comments):
@@ -44,7 +43,7 @@ internal final class BookInformationViewModel {
     }
     func getRents() {
         
-        wBooksRepository.fetchRents(bookID: bookViewModel.id).take(first: 1).startWithResult { result in
+        wBooksRepository.fetchRents(bookID: bookID).startWithResult { result in
             switch result {
                 
             case .success(let rents):
@@ -65,8 +64,13 @@ internal final class BookInformationViewModel {
 
 internal extension BookInformationViewModel {
     
-    var count: Int {
+    var commentsCount: Int {
         return _comments.value.count
+    }
+    
+    var lastCommentsCount: Int {
+        if commentsCount > 5 { return 5}
+        return commentsCount
     }
     
     subscript(index: Int) -> Comment {

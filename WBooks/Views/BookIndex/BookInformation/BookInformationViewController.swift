@@ -20,7 +20,7 @@ class BookInformationViewController: UIViewController {
 
     init(bookViewModel viewModel: BookViewModel) {
         self.bookViewModel = viewModel
-        self.bookInformationViewModel = BookInformationViewModel(bookViewModel: viewModel)
+        self.bookInformationViewModel = BookInformationViewModel(bookID: viewModel.id)
         super.init(nibName: nil, bundle: nil)
         bindViewModel()
     }
@@ -35,6 +35,8 @@ class BookInformationViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         _view.configureBookInformation()
+        bookInformationViewModel.getComments()
+        bookInformationViewModel.getRents()
         
     }
 
@@ -51,11 +53,7 @@ extension BookInformationViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if bookInformationViewModel.count > 5 {
-            return 5
-        } else {
-            return bookInformationViewModel.count
-        }
+        return bookInformationViewModel.lastCommentsCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

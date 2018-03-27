@@ -78,9 +78,6 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
         wishlistButton.sizeToFit()
         wishlistButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
         
-//        rentButton.contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
-//
-//        rentButton.blueGradient()
         rentButton.layer.cornerRadius = 25
         
         bookImage.image = UIImage(named: "img_book6")
@@ -90,15 +87,6 @@ class BookInformationCellView: UITableViewCell, NibLoadable {
         bookAvailability.textColor = UIColor(red: 0.65, green: 0.8, blue: 0.22, alpha: 1)
         bookAvailability.text = "Available"
         
-//        if !isAvailable {
-//            bookAvailability.textColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
-//            bookAvailability.text = "Not Available"
-//            rentButton.isEnabled = false
-//
-//            rentButton.greyGradient()
-//
-//        }
-        
     }
 
 }
@@ -107,9 +95,9 @@ extension UIButton {
     
     func greyGradient() {
         let gradient = CAGradientLayer()
-//        print(self.bounds)
+
         gradient.frame = self.bounds
-//        gradient.frame = CGRect(x: 0, y: 0, width: 275, height: 50)
+
         gradient.colors = [
             UIColor(red: 0.79, green: 0.79, blue: 0.79, alpha: 1).cgColor,
             UIColor(red: 0.87, green: 0.87, blue: 0.87, alpha: 1).cgColor,
@@ -126,7 +114,7 @@ extension UIButton {
     func blueGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
-//        gradient.frame = CGRect(x: 0, y: 0, width: 275, height: 50)
+
         gradient.colors = [
             UIColor(red: 0, green: 0.68, blue: 0.93, alpha: 1).cgColor,
             UIColor(red: 0.22, green: 0.8, blue: 0.8, alpha: 1).cgColor
