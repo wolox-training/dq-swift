@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 
 class AddNewViewController: UIViewController, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
@@ -34,6 +36,13 @@ UINavigationControllerDelegate {
         _view.imageButton.isUserInteractionEnabled = true
         
         _view.submitButton.addTarget(self, action: #selector(onTap(_:)), for: .touchUpInside)
+        
+        
+        let isValidSuggestion = _view.name.reactive.textValues.skipNil()
+            .combineLatest(with: _view.author.reactive.textValues.skipNil())
+            .map { $0.isNotEmpty && $1.isNotEmpty }
+        
+        _view.submitButton.reactive.isEnabled <~ SignalProducer(value: false).concat(SignalProducer(isValidSuggestion))
         
     }
     

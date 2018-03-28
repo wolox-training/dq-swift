@@ -17,6 +17,7 @@ protocol BookRepositoryType {
     
     func fetchBooks(page: Int) -> SignalProducer<[Book], RepositoryError>
     func fetchComments(bookID: Int) -> SignalProducer<[Comment], RepositoryError>
+    func fetchUserRents(userID: Int) -> SignalProducer<[Rent], RepositoryError>
     
 }
 
@@ -46,5 +47,11 @@ internal class WBooksRepository: AbstractRepository, BookRepositoryType {
     public func postSuggestion(title: String, author: String) {
         let parameters = ["title": title, "author": author, "link": "http://google.com"]
         performRequest(method: .post, path: "/book_suggestions", parameters: parameters, headers: ["Content-Type":"application/json","Accept":"application/json"])
+    }
+    
+    public func fetchUserRents(userID: Int) -> SignalProducer<[Rent], RepositoryError> {
+        return performRequest(method: .get, path: "/users/\(userID)/rents", parameters: nil) {
+            return decode($0).toResult()
+        }
     }
 }

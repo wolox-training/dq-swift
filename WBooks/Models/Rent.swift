@@ -18,7 +18,7 @@ internal struct Rent {
     let from: String
     let to: String
     let returnedAt: String?
-    let book: Book
+    let book: Book?
     let user: WBooksUser
 }
 
@@ -32,7 +32,7 @@ extension Rent: Argo.Decodable {
            
         return part1
             <*> json <|? "returned-at"
-            <*> json <| "book"
+            <*> json <|? "book"
             <*> json <| "user"
         
     }

@@ -48,6 +48,9 @@
 		0CC13C48205702F20075EBF4 /* BookIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC13C47205702F20075EBF4 /* BookIndexCell.xib */; };
 		0CC13C4A205704A10075EBF4 /* BookIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13C49205704A10075EBF4 /* BookIndexCell.swift */; };
 		0CC13C4C205705A10075EBF4 /* BookIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13C4B205705A10075EBF4 /* BookIndexController.swift */; };
+		0CCF6EC2206BDD2700C98B4C /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF6EC1206BDD2700C98B4C /* RentalsView.xib */; };
+		0CCF6EC4206BDD4A00C98B4C /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF6EC3206BDD4A00C98B4C /* RentalsView.swift */; };
+		0CCF6EC6206BE94B00C98B4C /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF6EC5206BE94B00C98B4C /* RentalsViewModel.swift */; };
 		0CE53EA220601F580055FA5A /* BookInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE53EA120601F580055FA5A /* BookInformationView.xib */; };
 		0CE53EA420603CEA0055FA5A /* BookInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE53EA320603CEA0055FA5A /* BookInformationView.swift */; };
 		0CE53EA620603FFD0055FA5A /* BookInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE53EA520603FFD0055FA5A /* BookInformationViewController.swift */; };
@@ -146,6 +149,9 @@
 		0CC13C47205702F20075EBF4 /* BookIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookIndexCell.xib; sourceTree = "<group>"; };
 		0CC13C49205704A10075EBF4 /* BookIndexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexCell.swift; sourceTree = "<group>"; };
 		0CC13C4B205705A10075EBF4 /* BookIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIndexController.swift; sourceTree = "<group>"; };
+		0CCF6EC1206BDD2700C98B4C /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
+		0CCF6EC3206BDD4A00C98B4C /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		0CCF6EC5206BE94B00C98B4C /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
 		0CE53EA120601F580055FA5A /* BookInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookInformationView.xib; sourceTree = "<group>"; };
 		0CE53EA320603CEA0055FA5A /* BookInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformationView.swift; sourceTree = "<group>"; };
 		0CE53EA520603FFD0055FA5A /* BookInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformationViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				0C998AD2205C3117008EF62B /* RentalsViewController.swift */,
+				0CCF6EC1206BDD2700C98B4C /* RentalsView.xib */,
+				0CCF6EC3206BDD4A00C98B4C /* RentalsView.swift */,
+				0CCF6EC5206BE94B00C98B4C /* RentalsViewModel.swift */,
 			);
 			path = Rentals;
 			sourceTree = "<group>";
@@ -574,6 +583,7 @@
 				0C9E09072062E24A0059FF45 /* BookCommentsCellView.xib in Resources */,
 				0CC13C48205702F20075EBF4 /* BookIndexCell.xib in Resources */,
 				0C8BAB4A2051C9210030E394 /* View.xib in Resources */,
+				0CCF6EC2206BDD2700C98B4C /* RentalsView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,9 +663,11 @@
 				0C963BFA20581134008E96F2 /* BookViewModel.swift in Sources */,
 				0C9E09012062A7BD0059FF45 /* BookInformationCellView.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				0CCF6EC4206BDD4A00C98B4C /* RentalsView.swift in Sources */,
 				0CA9F37E2063ECCC00D8C2D1 /* WBooksUser.swift in Sources */,
 				0CA33B9720658063008220EA /* AddNewView.swift in Sources */,
 				0C9B5E892064233100572559 /* BookCommentsCellView.swift in Sources */,
+				0CCF6EC6206BE94B00C98B4C /* RentalsViewModel.swift in Sources */,
 				0CC13C4C205705A10075EBF4 /* BookIndexController.swift in Sources */,
 				0C0A8C572052E6E200AD40D7 /* LoginService.swift in Sources */,
 				0C963BF620580E14008E96F2 /* Book.swift in Sources */,
