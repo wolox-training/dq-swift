@@ -20,6 +20,8 @@ public class AddNewView: UIView, NibLoadable {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var descript: UITextField!
     @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var scrollViewContent: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     func configureButton() {
         submitButton.blueGradient()
@@ -30,6 +32,8 @@ public class AddNewView: UIView, NibLoadable {
     func configureView() {
         
         backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
+        scrollViewContent.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
+        scrollView.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
         
         formContainer.layer.cornerRadius = 5
         formContainer.backgroundColor = UIColor.white
